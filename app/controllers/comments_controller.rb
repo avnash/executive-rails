@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
           @notif.user_id = follow.user_id
           @notif.post_id = @post.id
           @notif.notif_user = current_user.id
-          @notif.action = 'has commented on a post that you are following'
+          @notif.action = 'has commented on an article that you are following'
           @notif.save
         end
       end
@@ -39,7 +39,7 @@ class CommentsController < ApplicationController
       @notif.user_id = User.find(@comment.user_id).id
       @notif.post_id = Post.find(@comment.post_id).id
       @notif.notif_user = current_user.id
-      @notif.action = 'deleted your comment on a post'
+      @notif.action = 'deleted your comment on an article'
       @notif.save
     end
     @post = Post.find(@comment.post_id)

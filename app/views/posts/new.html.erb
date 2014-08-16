@@ -1,11 +1,11 @@
 <%= content_for :title do %>
-  Lodge a new Complaint
+  New Article
 <% end %>
 
-<% if signed_in? %>
-
-  <div class="new_post_form">
-  <h1 class="form_heading">Lodge a Complaint</h1></br></br>
+<% if signed_in? && current_user.usertype %>
+<br>
+  <div class="new_post_form"><br>
+  <h1 class="form_heading">New Article</h1></br></br>
 
   <div class="form_container">
     <div class="row">
@@ -22,23 +22,6 @@
         <%= f.label :files %><br>
         <%= f.file_field :file_link %><br><br>
 
-<br>
-        <%= f.label :tag, "Tags (min 1, max 4)" %> <br>
-        <% for tag in Tag.all %>
- <label>
-          <%= check_box_tag "post[tag_ids][]", tag.id, @post.tags.include?(tag) %>
-          <span>
-            <%= tag.name.capitalize %> &nbsp
-          </span>
-        </label>
-      <% end %>
-        <br>
-<br>
-        <%= f.label :anonymous%>
-        <%= f.check_box :anonymous %>
-
-        </br>
-        </br>
         <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
       <% end %>
 

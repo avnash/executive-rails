@@ -15,10 +15,6 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.title = params[:post][:title]
     @post.content = params[:post][:content]
-    @post.tag_ids = params[:post][:tag_ids]
-    if Integer(params[:post][:anonymous]) == 1
-      @post.anonymous = Integer(params[:post][:anonymous])
-    end
     if params[:post][:file_link]
       uploaded_io = params[:post][:file_link]
       File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
@@ -88,9 +84,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def solved
-    @posts = Post.where("solved = ?", true)
-  end
+#   def solved
+#     @posts = Post.where("solved = ?", true)
+#   end
 
   def search
     @posts = []

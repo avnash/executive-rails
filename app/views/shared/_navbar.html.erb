@@ -16,13 +16,13 @@
       <ul class="nav navbar-nav">
         <li><a href="http://students.iitm.ac.in">Students Portal</a></li>
 
+        <li><%= link_to "Feedback Portal", "http://students.iitm.ac.in/feedback" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Information", "#" %></li>
         <% if signed_in? %>
-          <li><%= link_to "Lodge a Complaint", new_post_path %></li>
         <% if current_user.usertype %>
-        <li><%= link_to "Edit My Tag", tag_path(id:current_user.usertype) %></li>
+          <li><%= link_to "Post Article", new_post_path %></li>
       <%end%>
       <% end %>
         <% if !signed_in? %>
@@ -47,10 +47,11 @@
           <a href="#"><span class="glyphicon glyphicon-user"> </span> <%= current_user.fullname%> <b class="caret"></b></a>
           <ul class="dropdown-menu signin_div">
             <li><%= link_to "My profile", current_user %></li>
-            <li> <%= link_to "My complaints", complaints_path %></li>
-            <li><%= link_to "Sign Out", signout_path, method: 'delete' %></li>
+            <% if current_user.usertype %>
+              <li> <%= link_to "My Articles", articles_path %></li>
+            <% end %>
             <li class="divider"></li>
-            <li class="allnotifs_btn"> <%= link_to "All Notifications", notifications_path%></li>
+            <li><%= link_to "Sign Out", signout_path, method: 'delete' %></li>
           </ul>
           </li>
         <% end %>

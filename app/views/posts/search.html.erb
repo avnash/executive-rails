@@ -7,7 +7,7 @@
 
 <br>
 <% if @posts and @posts.length!=0 %>
-  <div>Here are the resultant posts for your search string : </div>
+  <div class="post_div">Here are the resultant articles for your search string : </div>
   <br>
 <% @posts.uniq.each do |post| %>
   <%= render post %>
@@ -16,13 +16,14 @@
 <br>
 
 <% if @posts.length==0 %>
-  <br
-  <div><b>No Search results found</b>.</div>
+  <br>
+  <div class="post_div"><b>No Search results found</b>.</div>
 <% end %>
 
 <% if @posts.length>10 %>
     <%= render 'shared/loadmore' %>
 <% end %>
+
 
 <% else %>
 

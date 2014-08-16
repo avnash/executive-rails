@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   match '/solved', to: 'posts#solved', via: 'get'
   match '/search', to: 'posts#search', via: 'get'
   match '/get_file', to: 'posts#get_file', via: 'get'
-  match '/complaints', to: 'users#complaints', via: 'get'
+  match '/articles', to: 'users#articles', via: 'get'
   get '/tag/:id', to: 'tags#display', as: 'display'
 
   #  get 'static_pages/home'

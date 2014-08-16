@@ -9,15 +9,11 @@
   </div>
 <% end %>
   <br>
-  Categories:<br>
-  <%= link_to "All Categories<span class='badge pull-right'>#{Post.all.length}</span>".html_safe, root_path, class:"sidebar_link" %>
+  <%= link_to "All <span class='badge pull-right'>#{Post.all.length}</span>".html_safe, root_path, class:"sidebar_link" %>
     <% for tag in Tag.all %>
-    <li  data-container="body" data-trigger="hover" data-toggle="popover" data-content='<%= tag.description  %>' data-placement="left" >
+    <li  data-container="body" data-trigger="hover" data-toggle="popover" data-content='<%= tag.description  %>' data-placement="right" >
     <%= link_to "#{tag.name.capitalize} <span class='badge pull-right'>#{Tag.includes(:posts).find(tag.id).posts.where("solved=?",false).length}</span>".html_safe, display_path(id:tag.id), class:"sidebar_link" %>
     </li>
   <% end %>
-  <li>
-  <%= link_to "Resolved Complaints<span class='badge pull-right'>#{Post.where("solved=?",true).length}</span>".html_safe, solved_path, class:"sidebar_link sidebar_link_other" %>
-  </li>
 </div>
     

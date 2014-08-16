@@ -2,49 +2,18 @@
   <div class="post_title">
     <%= link_to post.title.capitalize, post_path(id: post.id) %>
   </div>
+
+  <div class="details_container small_font">
+    <span>
+        <span class="glyphicon glyphicon-user"></span> <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %> | <span class="glyphicon glyphicon-time"></span> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %>
+    </div>
   <div class="post_content">
     <%= raw post.content %>
-    <% if post.file_link%>
-      <br>
-      <%= link_to post.file_link, get_file_path(post_id: post.id), target: "_tab"%>
-    <% end %>
-    <br>
-  </div>
-  <div class="tags_container">Tags:<% @tags = Post.includes(:tags).find(post.id).tags %>
-  <% @tags.each do |tag| %>
-      <%= link_to tag.name.capitalize, tag, class:"tag_link btn btn-primary btn-xs btn-success" %>
-  <% end %>
   </div>
 
-    <% @anger = Anger.find_by("user_id=? AND post_id=?", current_user.id, post.id) %>
-    <span>
-      <span class="avg_anger float_left">Average anger level : <%= post.avg_anger.round(2) %> <span class="small_font"> (<span class="glyphicon glyphicon-user"></span><%=Anger.where("post_id=?",post.id).length%>)</span> |&nbsp</span>
-    <div class="angry_container <%=post.id%> float_left"> 
-    <% if @anger %>
-      <%= render partial: 'shared/existing_anger', locals: { anger: @anger, post: post} %>
-  <% else %>
-    <%= render partial: 'shared/new_anger', locals: { post: post } %>
-  <% end %>
-  </div>
-  </span>
-  <br>
-  <div class="details_container">
-    <span>
-      <% if !post.anonymous %>
-        <span class="glyphicon glyphicon-user"></span> <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %> | <span class="glyphicon glyphicon-time"></span> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %>
-  <%else%>
-        <span class="glyphicon glyphicon-user"></span> Anonymous | <span class="glyphicon glyphicon-time"></span> <%= post.created_at.strftime("%d-%m-%y   %l:%M %p") %>
-  <%end%>
-    </div>
     <div class="options_container">
-      <% if signed_in? && (current_user.usertype || current_user?(User.find(post.user_id)))%>
-        <%= link_to "<span class='glyphicon glyphicon-trash'></span> Delete Post".html_safe, post, method: :delete, class:"delete_btn btn btn-xs", data: { confirm: "Are you sure you want to delete this post?"}, remote: true %>
-    <% end %>
-      <% if signed_in? && (current_user.usertype && !post.solved) %> | 
-        <%= link_to "<span class='glyphicon glyphicon-ok'></span> Resolve ".html_safe, post, method: :put, class:"delete_btn btn btn-xs", data: { confirm: "Are you sure you want to mark this solved?"}, remote: true %>
-    <% end %>
-      <% if post.solved %> | 
-        <%= link_to "<span class='glyphicon glyphicon-ok'></span> Solved ".html_safe, '#', class:"solved_btn btn btn-xs" %>
+      <% if signed_in? && (current_user.usertype && current_user?(User.find(post.user_id)))%>
+        <%= link_to "<span class='glyphicon glyphicon-trash'></span> Delete Article".html_safe, post, method: :delete, class:"delete_btn btn btn-xs", data: { confirm: "Are you sure you want to delete this article?"}, remote: true %>
     <% end %>
     </div>
   </span>
