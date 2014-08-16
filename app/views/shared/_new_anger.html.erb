@@ -1,6 +1,0 @@
-<span class="float_left">Your Angry Level: </span>
-<% i = 1%>
-<% 5.times do %>
-  <%= link_to image_tag("icons/icon_angry.png", class: "angry_icon_dim"), angers_path(i:i , post_id: post.id), remote: true %>
-<%i=i+1%>
-  <% end %>

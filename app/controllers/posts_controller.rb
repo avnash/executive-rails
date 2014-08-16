@@ -31,7 +31,7 @@ class PostsController < ApplicationController
      # end
      # PostMailer.post_notify(@user).deliver
       @post.follow!(current_user)
-      flash[:success] = "Successfully lodged a complaint"
+      flash[:success] = "Successfully posted an article"
       redirect_to root_url
     else
       render 'new'

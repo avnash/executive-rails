@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def complaints
+  def articles
     @user = current_user
     @posts = Post.where("user_id = ?", current_user.id)
   end
