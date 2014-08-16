@@ -1,0 +1,3 @@
+$("div.angry_container.<%=@post.id%>").html("<%= escape_javascript(render partial: 'shared/existing_anger', locals: { anger: @anger}) %>")
+$("div.angry_container.<%=@post.id%>").siblings("span.avg_anger").html("Average anger level : <%= @post.avg_anger.round(2) %> <span class='small_font'> (<span class='glyphicon glyphicon-user'></span><%=Anger.where("post_id=?",@post.id).length%>)</span> |&nbsp")
+$("div.<%=@post.id%>.follow_unfollow_container").html("<%= escape_javascript(render partial: 'shared/unfollow', locals: { post: @post}) %>")

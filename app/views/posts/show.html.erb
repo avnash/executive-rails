@@ -1,0 +1,11 @@
+<% content_for :title do%>
+  <%= @post.title %>
+<% end %>
+
+<% if signed_in? %>
+
+  <%= render @post %>
+
+<% else %>
+  <%= render 'shared/unsigned' %>
+<% end %>

@@ -1,0 +1,10 @@
+<span class="float_left">Your Angry Level: </span>
+<% i = 1 %>
+<% anger.level.times do %>
+  <%= link_to image_tag("icons/icon_angry.png", class: "angry_icon"), anger_path(id:anger.id, i:i), method: 'patch', remote: true %>
+  <% i=i+1 %> 
+  <%end%>
+<% (5-anger.level).times do %>
+  <%= link_to image_tag("icons/icon_angry.png", class: "angry_icon_dim"), anger_path(id:anger.id, i:i), method: 'patch', remote: true %>
+  <% i=i+1 %>
+  <%end%>

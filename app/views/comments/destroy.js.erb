@@ -1,0 +1,4 @@
+$("div.<%=@comment.id%>").remove();
+<% if Comment.where("post_id=?", @post.id).length==1 %>
+  $("ul.<%=@post.id%>").prepend("<div class='no_comment_div'>No comments have been posted on this post yet.</div>")
+<% end %>

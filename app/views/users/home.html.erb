@@ -1,0 +1,7 @@
+<p>work for chiru...make a form here and let them update their profile...</p>
+<h2>This is profile page</h2>
+Profile: <% if !@user.profile_picture %><%= <%= image_tag("user-default-blue.png",size:"16x10",alt:"change photo") %><% end %>
+Name   : <%= @user.fullname %>
+Roll   : <%= @user.username %>
+Room   : <%= @user.room %>
+Hostel : <%= @user.hostel %>

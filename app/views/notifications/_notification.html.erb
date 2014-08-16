@@ -1,0 +1,12 @@
+<div class="notification_div">
+  <br>
+  <% @user = User.find(notification.notif_user) %>
+  <% if notification.action.split[2] == "post"%>
+  <%= link_to @user.fullname, @user %> has <%= notification.action %>
+<% else %>  
+  <% @post = Post.find(notification.post_id) %>
+  <%= link_to @user.fullname, @user %> has <%= notification.action %>
+  <%= render @post %><br>
+  <% end %>
+  <br>
+</div>

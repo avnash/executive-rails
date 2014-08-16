@@ -1,0 +1,25 @@
+<%= content_for :title do %>
+  Edit My Tag
+<% end %>
+
+<% if signed_in? && current_user.usertype %>
+  <div class="form_container">
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for(:tags, method: 'patch' , :html => { :class => "form-horizontal"}) do |f| %>
+
+          <%= f.label :name %><br>
+        <%= f.text_field :name , class:"form-control", placeholder:@tag.name %><br><br>
+
+        <%= f.label :description %><br>
+        <%= f.text_area :description, size: "80x12"  , class:"form-control", placeholder: @tag.description %><br><br>
+        <%= f.submit "Update", class: "btn btn-large btn-primary" %>
+      <% end %>
+
+      </div>
+    </div>
+  </div>
+<% else %>
+  <br>
+ <%= render 'shared/executive' %>
+<% end %>

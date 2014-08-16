@@ -1,0 +1,418 @@
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  background:rgb(245,245,245);
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+.popover-title {
+  display: none;
+}
+
+.small_font {
+  font-size: 65%;
+}
+.post_div textarea{
+  resize:vertical;
+  border:2px solid rgb(190,190,190);
+}
+
+.unsigned_msg_div, .rules_div {
+  background:white;
+  padding: 20px;
+  margin:20px 10px 0 0 ;
+  width:49%;
+  float:left;
+}
+
+.unsigned_msg_div .signin_form {
+  width:75%;
+}
+.rules_div{
+
+}
+
+.float_left {
+  float:left;
+}
+
+.float_right {
+  float:right;
+}
+
+.angry_icon {
+  height:20px;
+  width:20px;
+  float:left;
+  background-size: 20px 20px;
+  background-repeat:no-repeat;
+  opacity:0.5;
+}
+
+.angry_icon_dim {
+  height:20px;
+  width:20px;
+  float:left;
+  background-size: 20px 20px;
+  background-repeat:no-repeat;
+  opacity:0.1;
+}
+
+.angry_icon_dim:hover {
+  opacity:0.5;
+}
+
+.search_dropdown {
+  padding:5px 5px 5px 10px;
+}
+
+.search_dropdown label {
+  padding:3px; 
+}
+
+.search_arrow {
+  float:left;
+  padding: 7px 5px 7px 5px;
+  background: blue;
+  margin:5px 0;
+  cursor:pointer;
+}
+
+.search_div {
+  float:left;
+  width:100%
+}
+
+
+/* Wrapper for page content to push down footer */
+.container {
+  //background-color:rgb(255,255,255);
+  min-height: 100%;
+  max-width:1200px;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -50px;
+  /* Pad bottom by footer height */
+  padding: 0 0 75px;
+}
+
+.bold {
+  font-weight:900;
+}
+
+.notification_div {
+  width:100%;
+  float:left;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;    
+}
+.notification_navbar_div {
+  height:inherit;
+  overflow:auto;
+  font-size:90%;
+  width:400px;
+  white-space:normal;
+}
+
+.notifs_container { 
+  max-height:300px;
+  overflow:auto;
+  padding: 0 0 0 5px;
+}
+.notifs_container li:hover {
+  background:#eee;
+}
+.notifs_container a:hover {
+  text-decoration:none;
+}
+.notifs_container a li{
+  padding:5px;
+}
+.dropdown ul{
+  border:2px solid rgb(196,196,196);
+
+}
+
+.signin_div{
+  width:200px;
+}
+.dropdown li a {
+  white-space:normal;
+}
+
+.badge_notify{
+   background:rgb(0, 176, 211);
+   position:relative;
+   top: -10px;
+   left: -6px;
+  font-size:0.7em;
+  padding:0 3px 3px 3px;
+  border-radius:10px;
+  color:rgb(0,0,0);
+}
+.glyphicon-bell {
+  font-size:1.2em;
+}
+.delete_btn {
+  color:red;
+  padding:0px;
+}
+
+.solved_btn {
+  color:green;
+  padding:0px;
+}
+.navbar
+{ 
+  height:50px;
+  background-color:rgb(255,255,255);
+  max-width:1200px;
+  margin:auto;
+  box-shadow:0 3px 5px -2px rgba(200,200,200,0.9);
+}
+.navbar a {
+  color:#333A3F;
+}
+
+.allnotifs_btn a{
+  display:inline;
+}
+.search_box {
+  float:left;
+  border-radius:0px;
+  margin:5px 0;
+}
+
+.sidebar_link{
+  margin:1px;
+  display:block;
+  background:rgb(240,240,240);
+  padding:10px 25px;
+  color:black;
+}
+.sidebar_link:hover{
+  background:rgb(150,150,150);
+  color:white;
+  text-decoration:none;
+}
+
+.tag_link {
+  padding:0px 5px;
+}
+
+.tag_container{
+  margin: 0 0 5px 0;
+}
+.container {
+  padding-top: 50px;
+}
+.footer-container{
+  vertical-align:middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  position-bottom:0px;
+}
+
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 50px;
+  margin:auto;
+  max-width:1200px;
+  background-color:rgb(255,255,255);
+  box-shadow: 0 -3px 5px -2px rgba(200,200,200,0.9);
+}
+
+.gravatar{
+  background-color: rgb(50,50,50);
+  height: 100px;
+  width: 100px;
+}
+
+.signin_form {
+  background:rgb(255,255,255);
+  padding:35px;
+  box-shadow: 0 3px 5px -2px rgba(200,200,200,0.9);
+  width:30%;
+  margin:5%;
+}
+.signin_form input {
+  border-radius: 0px;
+  margin:5px;
+}
+
+.new_post_form {
+  padding:15px;
+  background:rgb(255,255,255);
+}
+.new_post_form textarea {
+  resize:vertical;
+  border-radius:0px
+}
+.new_post_form input {
+  border-radius:0px;
+}
+.sample1
+{
+  background-color:rgb(250,240,250);
+  width:100%;
+  height:150px;
+  padding:0;
+  margin:0;
+}
+
+.review_div
+{
+  background-color:rgb(200,200,200);
+  width:100%;
+  height:100px;
+  padding:0;
+  margin:0;
+}
+
+.sample2
+{
+  background-color:rgb(150,150,150);
+  width:20%;
+  height:100%;
+  padding:0;
+  margin:0;
+  float: left;
+}
+
+.book_content
+{
+  width:60%;
+  float: left;
+  height:100%;
+  background-color: rgb(250,20,50);
+}
+
+.issue_div
+{
+  height:100%;
+  width:20%;
+  float:left;
+  background-color:rgb(229,229,0);
+  position:relative;
+}
+
+.book_name
+{
+  background-color:rgb(229,29,0);
+  margin: 0;
+  padding: 5px 5px 0px 5px;
+}
+
+.author_name
+{
+  background-color:rgb(22,229,0);
+  margin: 0;
+  padding: 5px 5px 0px 5px;
+}
+
+.review_hide
+{
+  background-color:rgb(22,229,0);
+  margin: 0;
+  padding: 5px 5px 0px 5px;
+  float:right;
+}
+
+.expand_review{
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+.wrap_div{
+  width:100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form_container{
+  margin:auto;
+  width:70%;
+  background-color:rb(100,100,0);
+}
+
+.form_heading{
+  margin:auto;
+  width:73%;
+}
+
+.post_div{
+  background:rgb(255,255,255);
+  width:70%;
+  float:left;
+  padding:15px 20px 20px 20px;
+  margin-bottom:15px;
+  box-shadow:0 0px 5px -2px rgba(100,100,100,0.9);
+  display:none;
+}
+
+ul{
+  list-style: none;
+}
+
+.post_content{
+  //background-color:rgb(250,250,250);
+  padding-bottom:10px;
+  color:rgb(50,50,50);
+  font-size:1.2em;
+}
+.post_title{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.post_title a {
+  color:rgb(40,40,40);
+  font-size:1.2em;
+  font-weight:900;
+}
+
+.follow_btn, .unfollow_btn {
+  border-radius:0px;
+  //background:rgb(0,0,150);
+}
+
+.comment_container input, .comment_container textarea {
+  border-radius:0px;
+}
+.comment_div{
+
+  padding:15px 10px 10px 10px;
+  margin: 0 0 5px 0;
+  background-color:rgb(240,240,240);
+}
+
+.sidebar{
+  margin:15px 0;
+  padding:15px;
+  width:28%;
+  float:right;
+  background:rgb(255,255,255);
+  box-shadow:0 0px 5px -2px rgba(100,100,100,0.9);
+}
+
+li{
+  list-style:none;
+}
+
+.expand_comment{
+  float:left;
+}
+
+.comment_toggle{
+  float:right;
+}
+
+.load_more{
+width:70%;
+text-align:center;
+margin-bottom:20px;
+}

@@ -1,0 +1,52 @@
+<%= content_for :title do %>
+  Lodge a new Complaint
+<% end %>
+
+<% if signed_in? %>
+
+  <div class="new_post_form">
+  <h1 class="form_heading">Lodge a Complaint</h1></br></br>
+
+  <div class="form_container">
+    <div class="row">
+      <div class="span6 offset3">
+        <%= form_for(:post, url: posts_path, method: 'post' , :html => { :class => "form-horizontal"}) do |f| %>
+
+          <%= f.label :title %><br>
+        <%= f.text_field :title , class:"form-control" %><br><br>
+
+        <p>Please note that the following text will be stored and displayed as HTML text. So if you want to break a line, use <br> <%= "your lines <br>" %> <br> and put your paragraphs as <br> <%= "<p> your content </p>" %><br>There are other advantages of HTML text though. You can use it to make your content more effective.</p>
+        <%= f.label :content %><br>
+        <%= f.text_area :content, size: "80x12"  , class:"form-control"%><br><br>
+
+        <%= f.label :files %><br>
+        <%= f.file_field :file_link %><br><br>
+
+<br>
+        <%= f.label :tag, "Tags (min 1, max 4)" %> <br>
+        <% for tag in Tag.all %>
+ <label>
+          <%= check_box_tag "post[tag_ids][]", tag.id, @post.tags.include?(tag) %>
+          <span>
+            <%= tag.name.capitalize %> &nbsp
+          </span>
+        </label>
+      <% end %>
+        <br>
+<br>
+        <%= f.label :anonymous%>
+        <%= f.check_box :anonymous %>
+
+        </br>
+        </br>
+        <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+      <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<% else %>
+ <%= render 'shared/unsigned' %>
+<% end %>

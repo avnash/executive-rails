@@ -1,0 +1,23 @@
+<% content_for :title do %>
+  <%= @user.fullname.capitalize %>
+<% end %>
+
+<% if signed_in? %>
+
+  <br>
+<% @posts.each do |post| %>
+  <% if !post.anonymous || post.user_id==current_user.id %>
+  <%= render post %>
+<% end %>
+<% end %>
+
+<% if @posts.length>10 %>
+    <%= render 'shared/loadmore' %>
+<% end %>
+
+
+<%else%>
+
+  <% render 'shared/unsigned' %>
+
+<% end %>
