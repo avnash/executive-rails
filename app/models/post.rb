@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
   has_many :users, through: :angers
 
   validates :title, presence: true
-  validates :tags, presence: true
+  # validates :tags, presence: true
   validates :content, presence: true
   validates :user_id, presence: true
   validates :notifications_count, presence: true
