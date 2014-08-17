@@ -6,6 +6,7 @@
 
   	<%= render "shared/sidebar" %>
 	<br>
+<div class="post_main_container">
 	<% @posts.each do |post| %>
   		<%= render post %>
 	<% end %>
@@ -13,7 +14,7 @@
 	<% if @posts.length>10 %>
     	<%= render 'shared/loadmore' %>
 	<% end %>
-
+</div>
 <% else %>
 
   	<%= render 'shared/unsigned' %>
