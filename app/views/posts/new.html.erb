@@ -18,9 +18,9 @@
         <p>Please note that the following text will be stored and displayed as HTML text. So if you want to break a line, use <br> <%= "your lines <br>" %> <br> and put your paragraphs as <br> <%= "<p> your content </p>" %><br>There are other advantages of HTML text though. You can use it to make your content more effective.</p>
         <%= f.label :content %><br>
         <%= f.text_area :content, size: "80x12"  , class:"form-control"%><br><br>
-
-        <%= f.label :files %><br>
-        <%= f.file_field :file_link %><br><br>
+	<input id="post_tag_ids_" name="post[tag_ids][]" type="hidden" value="<%=current_user.usertype %>">
+        <!--<%= f.label :files %><br>
+        <%= f.file_field :file_link %><br><br>-->
 
         <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
       <% end %>
