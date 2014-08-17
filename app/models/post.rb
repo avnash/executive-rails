@@ -6,8 +6,8 @@ class Post < ActiveRecord::Base
   has_and_belongs_to_many :tags
   has_many :follows
   has_many :users, through: :follows
-  has_many :angers
-  has_many :users, through: :angers
+  has_many :rates
+  has_many :users, through: :rates
 
   validates :title, presence: true
   # validates :tags, presence: true

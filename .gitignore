@@ -14,3 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore development version of session controller
+/app/controllers/sessions_controller.rb

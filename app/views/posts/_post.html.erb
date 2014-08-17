@@ -10,7 +10,18 @@
   <div class="post_content">
     <%= raw post.content %>
   </div>
-
+    <% @rate = Rate.find_by("user_id=? AND post_id=?", current_user.id, post.id) %>
+    <span>
+      <span class="avg_rate float_left">Average rating : <%= post.avg_rate.round(2) %> <span class="small_font"> (<span class="glyphicon glyphicon-user"></span><%=Rate.where("post_id=?",post.id).length%>)</span> |&nbsp</span>
+    <div class="rating_container <%=post.id%> float_left"> 
+    <% if @rate %>
+      <%= render partial: 'shared/existing_rate', locals: { rate: @rate, post: post} %>
+  <% else %>
+    <%= render partial: 'shared/new_rate', locals: { post: post } %>
+  <% end %>
+  </div>
+  </span>
+  <br>
     <div class="options_container">
       <% if signed_in? && (current_user.usertype && current_user?(User.find(post.user_id)))%>
         <%= link_to "<span class='glyphicon glyphicon-trash'></span> Delete Article".html_safe, post, method: :delete, class:"delete_btn btn btn-xs", data: { confirm: "Are you sure you want to delete this article?"}, remote: true %>

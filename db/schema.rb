@@ -13,18 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140730111256) do
 
-  create_table "angers", force: true do |t|
-    t.integer  "user_id",                null: false
-    t.integer  "post_id",                null: false
-    t.integer  "level",      default: 0, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "angers", ["post_id"], name: "index_angers_on_post_id", using: :btree
-  add_index "angers", ["user_id", "post_id"], name: "index_angers_on_user_id_and_post_id", unique: true, using: :btree
-  add_index "angers", ["user_id"], name: "index_angers_on_user_id", using: :btree
-
   create_table "comments", force: true do |t|
     t.integer  "user_id",    null: false
     t.integer  "post_id",    null: false
@@ -68,7 +56,7 @@ ActiveRecord::Schema.define(version: 20140730111256) do
     t.text     "content",                             null: false
     t.integer  "notifications_count", default: 0,     null: false
     t.boolean  "anonymous",           default: false, null: false
-    t.float    "avg_anger",           default: 0.0,   null: false
+    t.float    "avg_rate",            default: 0.0,   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -83,38 +71,25 @@ ActiveRecord::Schema.define(version: 20140730111256) do
   add_index "posts_tags", ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id", unique: true, using: :btree
   add_index "posts_tags", ["tag_id"], name: "index_posts_tags_on_tag_id", using: :btree
 
+  create_table "rates", force: true do |t|
+    t.integer  "user_id",                null: false
+    t.integer  "post_id",                null: false
+    t.integer  "level",      default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rates", ["post_id"], name: "index_rates_on_post_id", using: :btree
+  add_index "rates", ["user_id", "post_id"], name: "index_rates_on_user_id_and_post_id", unique: true, using: :btree
+  add_index "rates", ["user_id"], name: "index_rates_on_user_id", using: :btree
+
   create_table "tags", force: true do |t|
-    t.string   "name",        limit: 40, null: false
-    t.text     "description",            null: false
+    t.string   "name",        limit: 45, null: false
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
-
-  create_table "users", force: true do |t|
-    t.integer   "user_id"
-    t.string    "username",            limit: 15,              null: false
-    t.string    "fullname",            limit: 80,              null: false
-    t.integer   "room"
-    t.string    "hostel",              limit: 40
-    t.text      "profile_picture",                             null: false
-    t.datetime  "time_of_reg"
-    t.string    "current_mess",        limit: 40
-    t.string    "comment",             limit: 50
-    t.string    "remember_token",      limit: 128
-    t.string    "bgroup",              limit: 5
-    t.integer   "contact",             limit: 8,   default: 0
-    t.string    "email"
-    t.string    "nick"
-    t.string    "gender",              limit: 1
-    t.string    "picaddress",          limit: 50
-    t.timestamp "updated_timestamp"
-    t.text      "usertype"
-    t.integer   "notifications_count",             default: 0, null: false
-  end
-
-  add_index "users", ["username"], name: "UNIQUE", unique: true, using: :btree
-  add_index "users", ["username"], name: "username", unique: true, using: :btree
 
 end

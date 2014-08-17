@@ -1,0 +1,6 @@
+<span class="float_left">Your Rating: </span>
+<% i = 1%>
+<% 5.times do %>
+  <%= link_to image_tag("icons/icon_rating.png", class: "rating_icon_dim"), rates_path(i:i , post_id: post.id), remote: true %>
+<%i=i+1%>
+  <% end %>

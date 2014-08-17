@@ -1,0 +1,2 @@
+$("div.rating_container.<%=@post.id%>").html("<%= escape_javascript(render partial: 'shared/existing_rate', locals: { rate: @rate }) %>")
+$("div.rating_container.<%=@post.id%>").siblings("span.avg_rate").html("Average rating : <%= @post.avg_rate.round(2) %> <span class='small_font'> (<span class='glyphicon glyphicon-user'></span><%=Rate.where("post_id=?",@post.id).length%>)</span> |&nbsp")
