@@ -6,6 +6,11 @@
 
   <%= render "shared/sidebar" %>
 <br>
+<div class="post_main_container">
+<% if @posts.length!=0 %>
+<% @user = @posts[0].user %>
+<%= render 'shared/secretary_profile' %>
+<% end %>
 <% @posts.each do |post| %>
   <%= render post %>
 <% end %>
@@ -17,7 +22,7 @@
 <% if @posts.length==0 %>
   <div>No posts are active in this category.</div>
 <% end %>
-
+</div>
 <% else %>
 
   <%= render 'shared/unsigned' %>
