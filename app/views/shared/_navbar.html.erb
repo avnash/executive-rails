@@ -19,7 +19,6 @@
         <li><%= link_to "Feedback Portal", "http://students.iitm.ac.in/feedback" %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Information", "#" %></li>
         <% if signed_in? %>
         <% if current_user.usertype %>
           <li><%= link_to "Post Article", new_post_path %></li>
