@@ -15,7 +15,9 @@ class TagsController < ApplicationController
 
   def update
     @tag = Tag.find(params[:id])
-    @tag.name = params[:tags][:name]
+    if params[:tags][:name].length!=0
+      @tag.name = params[:tags][:name]
+    end
     @tag.description = params[:tags][:description]
     @tag.save
     redirect_to :back
