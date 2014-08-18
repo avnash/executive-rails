@@ -21,6 +21,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if signed_in? %>
         <% if current_user.usertype %>
+          <li><%= link_to "Edit My Tag", tag_path(id:current_user.usertype) %></li>
           <li><%= link_to "Post Article", new_post_path %></li>
       <%end%>
       <% end %>
