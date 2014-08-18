@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
 --
 
 INSERT INTO `tags` (`id`, `name`, `created_at`, `updated_at`, `description`) VALUES
-(1, 'sports secretary', '2014-08-02 09:18:43', '2014-08-02 09:18:43', 'mdsds fgdsfg fd sdfg sg ere mdsds fgdsfg fd sdfg sg ere mdsds fgdsfg fd sdfg sg ere mdsds fgdsfg fd sdfg sg ere '),
+(1, 'sports secretary', '2014-08-02 09:18:43', '2014-08-02 09:18:43', ''),
 (2, 'Cultural affairs Secretary', '2014-08-02 09:18:43', '2014-08-02 09:18:43', ''),
 (3, 'co-curricular affairs secretary', '2014-08-02 09:18:43', '2014-08-02 09:18:43', ''),
 (4, 'academic affairs secretary', '2014-08-02 09:18:43', '2014-08-02 09:18:43', ''),
