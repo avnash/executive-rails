@@ -6,6 +6,7 @@
   <%= render "shared/sidebar" %>
 
 <br>
+<div class="post_main_container">
 <% if @posts and @posts.length!=0 %>
   <div class="post_div">Here are the resultant articles for your search string : </div>
   <br>
@@ -23,7 +24,7 @@
 <% if @posts.length>10 %>
     <%= render 'shared/loadmore' %>
 <% end %>
-
+</div>
 
 <% else %>
 
