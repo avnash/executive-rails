@@ -10,7 +10,8 @@
 <% if @posts and @posts.length!=0 %>
   <div class="post_div">Here are the resultant articles for your search string : </div>
   <br>
-<% @posts.uniq.each do |post| %>
+
+<% @posts.uniq.sort!{|a,b| b.created_at <=> a.created_at }.each do |post| %>
   <%= render post %>
 <% end %>
 <% end %>
@@ -18,7 +19,7 @@
 
 <% if @posts.length==0 %>
   <br>
-  <div class="post_div"><b>No Search results found</b>.</div>
+  <div class="post_div"><b>No Search results found.</b></div>
 <% end %>
 
 <% if @posts.length>10 %>
