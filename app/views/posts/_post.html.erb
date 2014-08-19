@@ -7,7 +7,7 @@
     <span><span class="glyphicon glyphicon-user"></span> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
   <% @tags.each do |tag| %>
-      <%= link_to tag.name.capitalize, display_path(id:tag.id), class:"" %>
+      <%= link_to tag.name, display_path(id:tag.id), class:"" %>
   <% end %> | 
         <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %> | <span class="glyphicon glyphicon-time"></span> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %>
     </div>
