@@ -34,7 +34,7 @@
           <ul class="dropdown-menu notification_navbar_div" >
             <div class="notifs_container">
               <% @notifs.each do |notif| %>
-                <%= link_to "<li><span class='bold'>#{User.find(notif.notif_user).fullname}</span> has #{notif.action}</li>".html_safe, notif%></li>
+                <%= link_to "<li><span class='bold'>#{User.find(notif.notif_user).fullname}</span>   #{notif.action}</li>".html_safe, notif%></li>
             <% end %></div>
           <% if @notifs.length==0 %>
             No unseen notifications.
