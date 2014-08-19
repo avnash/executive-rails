@@ -8,7 +8,6 @@
   <%= submit_tag "Search", class:"btn btn-xs btn-primary" %>
   </div>
 <% end %>
-  <br>
   <%= link_to "All <span class='badge pull-right'>#{Post.all.length}</span>".html_safe, root_path, class:"sidebar_link" %>
     <% for tag in Tag.all %>
     <li  data-container="body" data-trigger="hover" data-toggle="popover" data-content='<%= tag.description  %>' data-placement="right" >
