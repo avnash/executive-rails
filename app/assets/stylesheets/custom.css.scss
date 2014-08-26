@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Droid Sans', sans-serif;
   background:rgb(245,245,245);
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
@@ -258,8 +258,6 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 
 .new_post_form {
-  padding:15px;
-  background:rgb(255,255,255);
 }
 .new_post_form textarea {
   resize:vertical;
@@ -267,6 +265,17 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 .new_post_form input {
   border-radius:0px;
+}
+.new_post_form h1 {
+  width:100%;
+  margin:0px;
+}
+.new_post_form .post_div .row {
+  margin:0px;
+}
+.new_post_form .post_div .form_container {
+  margin:15px;
+  width:100%;
 }
 .sample1
 {
@@ -360,13 +369,14 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .post_main_container {
   //width:100%;
-  padding-left:25%;
+  padding-left:calc(25% + 10px);
+  margin-top:10px;
 }
 .post_div{
   background:rgb(255,255,255);
   float:left;
   width:100%;
-  padding:15px 20px 20px 20px;
+  padding:50px 120px 40px 120px;
   margin-bottom:15px;
   box-shadow:0 0px 5px -2px rgba(100,100,100,0.9);
   display:none;
@@ -388,7 +398,7 @@ ul{
 }
 .post_title a {
   color:rgb(40,40,40);
-  font-size:1.7em;
+  font-size:2.2em;
   font-weight:500;
 }
 .post_title a:hover {
@@ -418,6 +428,7 @@ ul{
   overflow-y:auto;
   margin:0px 0;
   padding:15px;
+  z-index:200;
   //max-width:337px;
   float:left;
   background:rgb(255,255,255);

@@ -3,8 +3,9 @@
 <% end %>
 
 <% if signed_in? && current_user.usertype %>
-  <div class="new_post_form"><br>
-  <h1 class="form_heading">New Article</h1></br></br>
+<%= render "shared/sidebar" %>
+  <div class="new_post_form post_main_container"><div class="post_div">
+  <h1 class="form_heading">New Article</h1><hr></br>
 
   <div class="form_container">
     <div class="row">
@@ -29,7 +30,7 @@
     </div>
   </div>
 </div>
-
+</div>
 <% else %>
  <%= render 'shared/unsigned' %>
 <% end %>

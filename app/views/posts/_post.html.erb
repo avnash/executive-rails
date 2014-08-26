@@ -2,7 +2,6 @@
   <div class="post_title">
     <%= link_to post.title.capitalize, post_path(id: post.id) %>
   </div>
-
   <div class="details_container medium_font">
     <span><span class="glyphicon glyphicon-user"></span> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
@@ -11,9 +10,11 @@
   <% end %> | 
         <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %> | <span class="glyphicon glyphicon-time"></span> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %>
     </div>
-<br>  <div class="post_content">
+  <hr>
+  <div class="post_content">
     <%= raw post.content %>
   </div>
+<hr>
     <% @rate = Rate.find_by("user_id=? AND post_id=?", current_user.id, post.id) %>
     <span>
       <span class="avg_rate float_left">Average rating : <%= post.avg_rate.round(2) %> <span class="small_font"> (<span class="glyphicon glyphicon-user"></span><%=Rate.where("post_id=?",post.id).length%>)</span> |&nbsp</span>

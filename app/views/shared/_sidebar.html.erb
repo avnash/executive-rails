@@ -1,13 +1,14 @@
 <div class="sidebar col-md-3">
     <%= form_tag search_path, method: 'get' do%>
   <%= text_field_tag :search, params[:search], placeholder:"Search", class:"form-control search_box" %>
-   <div class="search_dropdown">Advanced Search <br>
+  <!-- <div class="search_dropdown">Advanced Search <br>
           <label><%= check_box_tag 'title',  true, class: 'check_box' %> Title</label>
           <label><%= check_box_tag 'contents', true, class: 'check_box' %> Content</label>
           <label><%= check_box_tag 'comments', true, class: 'check_box' %> Comments</label>
   <%= submit_tag "Search", class:"btn btn-xs btn-primary" %>
-  </div>
+  </div>-->
 <% end %><br>
+<br>
     <% for tag in Tag.all %>
     <li  data-container="body" data-trigger="hover" data-toggle="popover" data-content='<%= tag.description  %>' data-placement="right" >
     <%= link_to "#{tag.name}".html_safe, display_path(id:tag.id), class:"sidebar_link" %>
