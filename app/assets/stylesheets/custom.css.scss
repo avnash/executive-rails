@@ -50,7 +50,7 @@ body {
   float:left;
   background-size: 20px 20px;
   background-repeat:no-repeat;
-  opacity:0.5;
+  opacity:1;
 }
 
 .rating_icon_dim {
@@ -59,7 +59,7 @@ body {
   float:left;
   background-size: 20px 20px;
   background-repeat:no-repeat;
-  opacity:0.1;
+  opacity:0.2;
 }
 
 .rating_icon_dim:hover {
@@ -179,12 +179,18 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 .navbar a {
   color:white;
 }
+.navbar a li {
+  color:black;
+}
 
 .nav li ul li a:hover{
-  background:red;
+  background:rgb(200,200,200);
 }
 .nav li a:hover{
   background:rgb(50,50,50);
+}
+#footer .nav li a:hover{
+  background:rgb(250,250,250);
 }
 
 .navbar-collapse {
@@ -376,7 +382,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background:rgb(255,255,255);
   float:left;
   width:100%;
-  padding:50px 120px 40px 120px;
+  padding:50px 100px 40px 100px;
   margin-bottom:15px;
   box-shadow:0 0px 5px -2px rgba(100,100,100,0.9);
   display:none;
