@@ -91,19 +91,19 @@ class PostsController < ApplicationController
 
   def search
     @posts = []
-    if params[:title]
+    #if params[:title]
       @posts_title = Post.search(params[:search], 'title')
       @posts = @posts + @posts_title
-    end
-    if params[:contents]
+    #end
+    #if params[:contents]
       @posts_contents = Post.search(params[:search], 'content' )
       @posts = @posts + @posts_contents
-    end
-    if params[:comments]
+    #end
+    #if params[:comments]
       @comments = Comment.where("content LIKE ?", "%#{params[:search]}%")
       @posts_comments = Post.find(@comments.uniq.pluck(:post_id))
       @posts = @posts + @posts_comments
-    end
+    #end
   end
 
 end

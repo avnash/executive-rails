@@ -15,13 +15,11 @@
   <%= render post %>
 <% end %>
 <% end %>
-<br>
 
 <% if @posts.length==0 %>
-  <br>
   <div class="post_div"><b>No Search results found.</b></div>
 <% end %>
-
+<br>
 <% if @posts.length>10 %>
     <%= render 'shared/loadmore' %>
 <% end %>
