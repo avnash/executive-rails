@@ -375,7 +375,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .post_main_container {
   //width:100%;
-  padding-left:calc(25% + 10px);
+  //padding-left:calc(25% + 10px);
   margin-top:10px;
 }
 .post_div{
@@ -428,10 +428,7 @@ ul{
 }
 
 .sidebar{
-  position:fixed;
   height:calc(100% - 100px);
-  overflow-x:none;
-  overflow-y:auto;
   margin:0px 0;
   padding:15px;
   z-index:200;
