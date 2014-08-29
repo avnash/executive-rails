@@ -6,7 +6,7 @@
   <% @tags.each do |tag| %>
       <%= link_to tag.name, display_path(id:tag.id), class:"" %>
   <% end %> <br> 
-        <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %> | <span class="glyphicon glyphicon-time"></span> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span>
+        <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %></span><span class="float_right"><br> <span class="glyphicon glyphicon-time"></span><%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span>
     </div>
   <br><hr>
   <div class="post_content">
