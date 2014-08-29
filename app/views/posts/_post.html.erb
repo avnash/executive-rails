@@ -1,14 +1,14 @@
 <div class="post_div <%=post.id%>"> 
     <%= link_to "<div class='post_title'>#{post.title.capitalize}</div>".html_safe, post_path(id: post.id) %>
   <div class="details_container medium_font">
-    <span><span class="glyphicon glyphicon-user"></span> 
+    <span class="float_left profile_pic"><%= image_tag(User.find(post.user_id).picaddress, size:"35x35", alt:User.find(post.user_id).username) %></span><span class="float_left"> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
   <% @tags.each do |tag| %>
       <%= link_to tag.name, display_path(id:tag.id), class:"" %>
-  <% end %> | 
-        <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %> | <span class="glyphicon glyphicon-time"></span> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %>
+  <% end %> <br> 
+        <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %> | <span class="glyphicon glyphicon-time"></span> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span>
     </div>
-  <hr>
+  <br><hr>
   <div class="post_content">
     <%= raw post.content %>
   </div>
