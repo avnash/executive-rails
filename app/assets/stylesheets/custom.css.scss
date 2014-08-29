@@ -495,4 +495,11 @@ li{
   padding:20px;
   background:white;
   margin-bottom:10px;
+  box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+  -webkit-box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+}
+.sec_pro_container img:hover {
+
+  box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+  -webkit-box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
 }
