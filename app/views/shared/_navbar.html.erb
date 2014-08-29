@@ -28,7 +28,7 @@
         <% if !signed_in? %>
           <li><%= link_to "Sign In", signin_path %></li>
       <% else %>
-          <li class="dropdown">
+<!--          <li class="dropdown">
         <% @notifs = Notification.where("user_id=? AND seen=0", current_user) %>
         <a href="#"><span class="glyphicon glyphicon-bell"><% if @notifs.length %><span class="badge_notify"><%= @notifs.length %></span><% end %></a>
           <ul class="dropdown-menu notification_navbar_div" >
@@ -43,6 +43,7 @@
             <li class="allnotifs_btn"> <%= link_to "All Notifications", notifications_path %></li>
           </ul>
           </li>
+-->
           <li class="dropdown">
           <a href="#"><span class="glyphicon glyphicon-user"> </span> <%= current_user.fullname%> <b class="caret"></b></a>
           <ul class="dropdown-menu signin_div">
