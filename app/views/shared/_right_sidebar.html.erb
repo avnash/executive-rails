@@ -1,4 +1,4 @@
-<div class="sidebar right_sidebar float_right col-md-4 col-xs-12 col-sm-6"><br>
+<div class="sidebar right_sidebar float_right col-md-3 col-xs-12 col-sm-6"><br>
     <strong>Recent Posts:</strong><br>
     <% for post in Post.limit(5).reverse_order %>
       <% @tags = Post.includes(:tags).find(post.id).tags %>
