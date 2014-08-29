@@ -461,13 +461,6 @@ a .post_title {
   float:right;
 }
 
-@media (min-width : 980px) {
-  .right_sidebar {
-    position: fixed;
-  }
-  
-}
-
 .right_sidebar .sidebar_link {
   padding-left:5px;
   background:white;
@@ -533,3 +526,19 @@ li{
   box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
   -webkit-box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
 }
+
+@media (min-width : 980px) {
+  .right_sidebar {
+    position: fixed;
+  }
+  
+  .sidebar {
+    position:fixed;
+  }
+  .post_main_container {
+    margin-left:25%;
+
+  }
+  
+}
+
