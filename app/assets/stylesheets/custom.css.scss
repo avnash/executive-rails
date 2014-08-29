@@ -8,8 +8,15 @@ body {
 
 a, a:hover{
   color: #4A439C;
+  text-decoration:none;
+}
+a:hover {
+  opacity:0.9;
 }
 
+.navbar li a:hover {
+  opacity:1;
+}
 .popover-title {
   display: none;
 }
@@ -223,7 +230,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   color:black;
 }
 .sidebar_link:hover{
-  background:rgb(150,150,150);
+  background:#7B77B3;
   color:white;
   text-decoration:none;
 }
@@ -392,7 +399,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   background:rgb(255,255,255);
   float:left;
   width:100%;
-  padding:50px 100px 40px 100px;
+  padding:20px 40px 20px 50px;
   margin-bottom:15px;
   box-shadow:0 0px 5px -2px rgba(100,100,100,0.9);
   display:none;
@@ -408,18 +415,18 @@ ul{
   color:rgb(50,50,50);
   font-size:1.2em;
 }
-.post_title{
+a .post_title{
   padding-top:10px;
   padding-bottom:10px;
 }
-.post_title a {
+a .post_title {
   color:rgb(40,40,40);
   font-size:2.2em;
   font-weight:500;
 }
-.post_title a:hover {
+.post_title:hover {
+  color:#7B77B3;
   opacity:0.8;
-  text-decoration:none;
 }
 
 .follow_btn, .unfollow_btn {
@@ -442,12 +449,30 @@ ul{
   margin:0px 0;
   padding:15px;
   z-index:200;
-  //max-width:337px;
+  max-width:300px;
   float:left;
   background:rgb(255,255,255);
   box-shadow:0 0px 5px -2px rgba(100,100,100,0.9);
 }
 
+.right_sidebar {
+  max-width:370px;
+  margin-top:10px;
+  margin-right:5px;
+  margin-left:0px;
+  float:right;
+}
+
+.right_sidebar .sidebar_link {
+  padding-left:5px;
+  background:white;
+  border-bottom:1px solid #D0CDFF;
+}
+
+.right_sidebar .sidebar_link:hover {
+  color:#22197F;
+  //text-decoration:underline;
+}
 li{
   list-style:none;
 }

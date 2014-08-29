@@ -1,0 +1,10 @@
+<div class="right_sidebar sidebar float_right"><br>
+    <strong>Recent Posts:</strong><br>
+    <% for post in Post.limit(5).reverse_order %>
+      <% @tags = Post.includes(:tags).find(post.id).tags %>
+    <li  data-container="body" data-trigger="hover" data-toggle="popover" data-content='' data-placement="right" >
+    <%= link_to "#{truncate(post.title.capitalize, length:75)}<br>--#{@tags[0].name}".html_safe, post_path(id:post.id), class:"sidebar_link" %>
+    </li>
+  <% end %>
+</div>
+    

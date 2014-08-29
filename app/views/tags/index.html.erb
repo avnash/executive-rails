@@ -5,7 +5,8 @@
 <% if signed_in? %>
 
   	<%= render "shared/sidebar" %>
-<div class="post_main_container col-md-8">
+  	<%= render "shared/right_sidebar" %>
+<div class="post_main_container col-md-6">
 	<% @posts.each do |post| %>
   		<%= render post %>
 	<% end %>

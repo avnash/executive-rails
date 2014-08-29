@@ -1,7 +1,5 @@
 <div class="post_div <%=post.id%>"> 
-  <div class="post_title">
-    <%= link_to post.title.capitalize, post_path(id: post.id) %>
-  </div>
+    <%= link_to "<div class='post_title'>#{post.title.capitalize}</div>".html_safe, post_path(id: post.id) %>
   <div class="details_container medium_font">
     <span><span class="glyphicon glyphicon-user"></span> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
