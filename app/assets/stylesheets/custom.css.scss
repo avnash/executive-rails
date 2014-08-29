@@ -431,7 +431,20 @@ a .post_title {
 
 .follow_btn, .unfollow_btn {
   border-radius:0px;
-  //background:rgb(0,0,150);
+  background: #87C38E;
+  border:0px;
+}
+.follow_btn:hover,.follow_btn:active,  {
+  background: #97D39E;
+  border:0px;
+}
+.follow_btn:focus {
+  background:#87C38E;
+  border:0px;
+}
+.unfollow_btn, unfollow_btn:hover, .unfollow_btn:active {
+  background:white;
+  border:0px;
 }
 
 .comment_container input, .comment_container textarea {
@@ -445,7 +458,7 @@ a .post_title {
 }
 
 .sidebar{
-  margin:0px 0;
+  margin:10px 0 0 0 ;
   padding:15px;
   z-index:200;
   float:left;
@@ -455,7 +468,6 @@ a .post_title {
 
 .right_sidebar {  
   right:0;
-  margin-top:10px;
   //margin-right:5px;
   //margin-left:0px;
   float:right;
@@ -525,6 +537,12 @@ li{
 
   box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
   -webkit-box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+}
+
+.form_container {
+  background:white;
+  padding:40px; 
+  margin: 10px;
 }
 
 @media (min-width : 980px) {

@@ -9,6 +9,7 @@
   </div>-->
 <% end %><hr>
 <br>
+  <%= link_to "All Posts".html_safe, root_path, class:"sidebar_link" %>
     <% for tag in Tag.all %>
     <li  data-container="body" data-trigger="hover" data-toggle="popover" data-content='<%= tag.description  %>' data-placement="right" >
     <%= link_to "#{tag.name}".html_safe, display_path(id:tag.id), class:"sidebar_link" %>

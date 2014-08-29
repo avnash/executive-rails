@@ -4,8 +4,9 @@
 <% if signed_in? %>
 
   <%= render "shared/sidebar" %>
+  <%= render "shared/right_sidebar" %>
 <br>
-<div class="post_main_container col-md-8">
+<div class="post_main_container col-md-6 col-xs-12">
 <%= render 'shared/secretary_profile' %>
 <% if @posts.length!=0 %>
 <% @user = @posts[0].user %>
