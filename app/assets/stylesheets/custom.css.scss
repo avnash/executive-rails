@@ -34,8 +34,13 @@ a, a:hover{
 
 .unsigned_msg_div .signin_form {
 }
-.signin_form .btn {
+.btn-primary, .btn-primary:active,.btn-primary.active,.btn-primary:focus, .btn-primary:checked {
   background:#4A439C;
+  border-color: #4A439C;
+}
+.btn-primary:hover{
+  background:#6E6A9C;
+  border-color: #4A439C;
 }
 .rules_div{
 
