@@ -1,12 +1,13 @@
 <div class="post_div <%=post.id%>"> 
+<% user = User.find(post.user_id)%>
     <%= link_to "<div class='post_title'>#{post.title.capitalize}</div>".html_safe, post_path(id: post.id) %>
   <div class="details_container medium_font">
-    <span class="float_left profile_pic"><%= image_tag(""+(User.find(post.user_id).picaddress || 'user-default-blue.png')+"", size:"35x35", alt:User.find(post.user_id).username) %></span><span class="float_left"> 
+    <span class="float_left profile_pic"><%= image_tag(""+(user.picaddress || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left"> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
   <% @tags.each do |tag| %>
       <%= link_to tag.name, display_path(id:tag.id), class:"" %>
   <% end %> <br> 
-        <%= User.find(post.user_id).username %> | <%= User.find(post.user_id).fullname.capitalize %></span><span class="float_right"><br> <span class="glyphicon glyphicon-time"></span><%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span>
+        <%= user.username %> | <%= user.fullname.capitalize %></span><span class="float_right"><br> <span class="glyphicon glyphicon-time"></span><%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span>
     </div>
   <br><hr>
   <div class="post_content">
@@ -26,7 +27,7 @@
   </span>
   <br>
     <div class="options_container">
-      <% if signed_in? && (current_user.usertype && current_user?(User.find(post.user_id)))%>
+      <% if signed_in? && (current_user.usertype && current_user?(user))%>
         <%= link_to "<span class='glyphicon glyphicon-trash'></span> Delete Article".html_safe, post, method: :delete, class:"delete_btn btn btn-xs", data: { confirm: "Are you sure you want to delete this article?"}, remote: true %>
     <% end %>
     </div>

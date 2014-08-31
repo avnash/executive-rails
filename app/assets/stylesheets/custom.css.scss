@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Droid Sans', sans-serif;
+  font-family:'Roboto', sans-serif;
   background:rgb(245,245,245);
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
@@ -422,10 +422,11 @@ a .post_title{
 a .post_title {
   color:rgb(40,40,40);
   font-size:2.2em;
-  font-weight:500;
+  font-weight:400;
 }
 .post_title:hover {
-  color:#7B77B3;
+  text-shadow:2px 2px #999; 
+  color:black;
   opacity:0.8;
 }
 

@@ -1,8 +1,12 @@
 <% user = User.find(comment.user_id)%>
 <div class="comment_div <%=comment.id%> <% if user.usertype %>secretary_background <%end%>">
-  <li><%= raw comment.content %></li>
-  <span class="glyphicon glyphicon-user"></span> <%= user.username %> | <%= user.fullname.capitalize %> | <% if user.usertype %> <span class="secretary"><%= user.typename %></span> |<% end %> <span class="glyphicon glyphicon-time"></span> <%= (comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %>
-<br>
+  <li><%= raw comment.content %></li><br>
+
+  <div class="details_container medium_font"> 
+    <span class="float_left profile_pic"><%= image_tag(""+(user.picaddress || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left">  
+        <%= user.username %> <br> <%= user.fullname.capitalize %></span><span class="float_right"><br> <span class="glyphicon glyphicon-time"></span><%= (comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span> 
+    </div>
+<br><br>
   <% if signed_in? && (current_user?(User.find(comment.user_id))) %> 
     <%= link_to "<span class='glyphicon glyphicon-trash'></span> Delete Comment".html_safe, comment, method: :delete, class:"delete_btn btn btn-xs", remote: true, data: { confirm: "Are you sure you want to delete this comment?" } %>
 <% end %>
