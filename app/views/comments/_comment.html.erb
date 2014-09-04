@@ -4,7 +4,7 @@
 
   <div class="details_container medium_font"> 
     <span class="float_left profile_pic"><%= image_tag(""+(user.picaddress || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left">  
-        <%= user.username %> <br> <%= user.fullname.capitalize %></span><span class="float_right"><br> <span class="glyphicon glyphicon-time"></span><%= (comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span> 
+        <%= user.username %> <br> <%= user.fullname.capitalize %></span><span class="float_right"><br><%= (comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span> 
     </div>
 <br><br>
   <% if signed_in? && (current_user?(User.find(comment.user_id))) %> 
