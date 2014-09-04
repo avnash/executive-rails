@@ -45,3 +45,6 @@ gem 'tzinfo-data'
 # gem 'debugger', group: [:development, :test]
 
 gem 'jquery-turbolinks'
+
+# HTML truncator
+gem 'html_truncator'

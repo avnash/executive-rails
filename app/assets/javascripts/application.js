@@ -19,6 +19,7 @@
 
 var ready = function(){
   $(".comment_container").hide();
+  $(".expanded_content").hide();
 
   $(".expand_comment").click(function(){
     if($(this).html()=="View Comments"){
@@ -33,6 +34,10 @@ var ready = function(){
   });
   $("[data-toggle='popover']").popover();
 
+  $(".expand_content").click(function(){
+    $(this).parent('.truncated_content').hide();
+    $(this).parent('.truncated_content').siblings('.expanded_content').show();
+  });
 };
 $(document).ready(ready);
 $(document).on('page:load', ready);

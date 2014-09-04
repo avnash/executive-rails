@@ -10,8 +10,9 @@
         <%= user.username %> | <%= user.fullname.capitalize %></span><span class="float_right"><br> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span>
     </div>
   <br><hr>
-  <div class="post_content">
-    <%= raw post.content %>
+  <div class="post_content"><% require "html_truncator" %>
+    <div class="truncated_content"><%= raw HTML_Truncator.truncate(post.content, 50, :ellipsis => '...<a class="expand_content">more</a>') %></div>
+    <div class="expanded_content"><%= raw post.content %></div>
   </div>
 <hr>
     <% @rate = Rate.find_by("user_id=? AND post_id=?", current_user.id, post.id) %>
