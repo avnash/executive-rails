@@ -33,8 +33,8 @@ var ready = function(){
     }
   });
   $(".expand_content").click(function(){
-    $(this).parent.hide();
-    $(this).parent.siblings('.expanded_content').show();
+    $(this).parent.parent.hide();
+    $(this).parent.parent.siblings('.expanded_content').show();
   });
   $("[data-toggle='popover']").popover();
 
