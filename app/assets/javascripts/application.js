@@ -32,12 +32,12 @@ var ready = function(){
       $(this).html("View Comments");
     }
   });
-  $("[data-toggle='popover']").popover();
-
   $(".expand_content").click(function(){
     $(this).parent('.truncated_content').hide();
     $(this).parent('.truncated_content').siblings('.expanded_content').show();
   });
+  $("[data-toggle='popover']").popover();
+
 };
 $(document).ready(ready);
 $(document).on('page:load', ready);
