@@ -52,7 +52,12 @@
               <li> <%= link_to "My Articles", articles_path %></li>
               <li class="divider"></li>
             <% end %>
+<<<<<<< HEAD
              <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
+=======
+           <li><%= link_to "My profile", current_user %></li>
+           <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
+>>>>>>> execute
             <li><%= link_to "Sign Out", signout_path, method: 'delete' %></li>
           </ul>
           </li>
