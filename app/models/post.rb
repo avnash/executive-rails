@@ -14,6 +14,10 @@ class Post < ActiveRecord::Base
   validates :content, presence: true
   validates :user_id, presence: true
   validates :notifications_count, presence: true
+  validates :file_link, allow_blank: true, format: {
+    with: %r{\.doc|docx|pdf|xls}i,
+    message: 'Not a valid format please upload in doc|docx|pdf|xls  '
+  }
 
   def self.search(search, designation)
     search_condition = "%" + search + "%"
