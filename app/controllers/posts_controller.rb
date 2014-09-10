@@ -12,16 +12,24 @@ class PostsController < ApplicationController
   end
 
   def create
+    time=Time.now
+    timeinteger=time.to_i
+    timestring=timeinteger.to_s
     @post = Post.new
     @post.title = params[:post][:title]
     @post.content = params[:post][:content]
     @post.tag_ids = params[:post][:tag_ids]
     if params[:post][:file_link]
       uploaded_io = params[:post][:file_link]
-      File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+      link=uploaded_io.original_filename
+      ext=File.extname(link)
+      base=File.basename(link,ext)
+      base=base+timestring
+      full_link=base+ext
+       File.open(Rails.root.join('public', 'uploads', full_link), 'wb') do |file|
         file.write(uploaded_io.read)
       end
-      @post.file_link = uploaded_io.original_filename
+      @post.file_link = full_link
     end
 
     @post.user = current_user
