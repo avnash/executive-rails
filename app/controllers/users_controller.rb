@@ -10,16 +10,12 @@ class UsersController < ApplicationController
       @user.hostel = params[:user][:hostel]
       @user.email = params[:user][:email]
       @user.contact = params[:user][:contact]
-       if params[:user][:file_link]
-      uploaded_io = params[:user][:file_link]
-      File.open(Rails.root.join('app', 'assets','images', uploaded_io.original_filename), 'wb') do |file|
-        file.write(uploaded_io.read)
-      end
-      @user.profile_picture = uploaded_io.original_filename
-    end
-
-
+      @user.profile_picture = params[:user][:profile_picture].original_filename
       if @user.save
+          uploaded_io = params[:user][:profile_picture]
+          File.open(Rails.root.join('public','uploads', uploaded_io.original_filename), 'wb') do |file|
+              file.write(uploaded_io.read)
+          end
 	  flash[:success]="User Profile updated successfully"
           redirect_to @user
       else
