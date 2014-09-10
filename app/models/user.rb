@@ -22,7 +22,10 @@ class User < ActiveRecord::Base
   validates :username, presence: true, length: {is: 8}
   validates :notifications_count, presence: true
   validates :contact,presence: true,format: {with: /\A\d{10}\z/}
-
+  validates :profile_picture, allow_blank: true, format: {
+    with: %r{\.gif|jpg|png|jpeg}i,
+    message: 'Not a valid format please upload in jpg||png||gif||jpeg '
+  }
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
