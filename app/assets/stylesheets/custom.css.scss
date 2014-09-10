@@ -437,15 +437,26 @@ a .post_title {
   background: #87C38E;
   border:0px;
 }
-.follow_btn:hover,.follow_btn:active,  {
+.like_btn,.unlike_btn
+{
+ border-radius:0px;
+  background: #87C38E;
+  border:0px; }
+
+
+.follow_btn:hover,.follow_btn:active,.like_btn:hover,.like_btn:active {
   background: #97D39E;
   border:0px;
 }
-.follow_btn:focus {
+.follow_btn:focus,.like_btn:focus {
   background:#87C38E;
   border:0px;
 }
 .unfollow_btn, unfollow_btn:hover, .unfollow_btn:active {
+  background:white;
+  border:0px;
+}
+.unlike_btn, unlike_btn:hover, .unlike_btn:active {
   background:white;
   border:0px;
 }

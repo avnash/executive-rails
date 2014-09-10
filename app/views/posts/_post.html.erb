@@ -42,6 +42,23 @@
   <% end %>
   </div>
 <%end%>
+
+
+
+<% if current_user.id!=post.user_id %>
+  <div class="<%=post.id%> like_unlike_container">
+    <% if post.liking?(current_user).length==0 %>
+      <%= render partial: 'shared/like', locals: { post: post } %>
+  <% else %>
+      <%= render partial: 'shared/unlike', locals: { post: post } %>
+  <% end %>
+ </div>
+<%end%>
+
+
+
+
+
 <span class="comment_toggle btn btn-xs btn-default"><span class="expand_comment">View Comments</span>&nbsp(<%=Comment.where("post_id=?",post.id).length%>)</span>
   <br><br>
 

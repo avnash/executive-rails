@@ -1,0 +1,1 @@
+$("div.<%=@post.id%>.like_unlike_container").html("<%= escape_javascript(render partial: 'shared/unlike', locals: { post: @post}) %>")

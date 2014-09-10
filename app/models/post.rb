@@ -8,6 +8,7 @@ class Post < ActiveRecord::Base
   has_many :users, through: :follows
   has_many :rates
   has_many :users, through: :rates
+  has_many :likes
 
   validates :title, presence: true
   validates :tags, presence: true
@@ -34,6 +35,17 @@ class Post < ActiveRecord::Base
 
   def unfollow!(user)
     follows.find_by(user_id: user.id).destroy
+  end
+  def liking?(user)
+    likes.where("user_id=?", user.id)
+  end
+
+  def like!(user)
+    likes.create!(user_id: user.id)
+  end
+
+  def unlike!(user)
+    likes.find_by(user_id: user.id).destroy
   end
 
 end
