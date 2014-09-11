@@ -48,3 +48,5 @@ gem 'jquery-turbolinks'
 
 # HTML truncator
 gem 'html_truncator'
+gem 'paperclip'
+gem 'ckeditor'
