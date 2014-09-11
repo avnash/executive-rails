@@ -15,10 +15,6 @@
     <div class="expanded_content"><%= raw post.content %></div>
   </div>
 <hr>
-    <% @rate = Rate.find_by("user_id=? AND post_id=?", current_user.id, post.id) %>
-    <span>
-      <span class="avg_rate float_left">Average rating : <%= post.avg_rate.round(2) %> <span class="small_font"> (<span class="glyphicon glyphicon-user"></span><%=Rate.where("post_id=?",post.id).length%>)</span> |&nbsp</span>
-  </span>
   <br>
     <div class="options_container">
       <% if signed_in? && (current_user.usertype && current_user?(user))%>
