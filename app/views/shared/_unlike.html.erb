@@ -1,8 +1,8 @@
-<div class="col-md-4">
+<div class="col-md-4" style="position:relative;left:20%;">
 <%= form_for(:like, url: like_path(post.id), method: 'delete', remote: true, html: {:class=>'float_left'}) do |f| %>
-  <%= f.submit "Unlike Post", class: "unlike unlike_btn btn btn-xs btn-default" %>
+  <%= f.submit "Unlike", class: "unlike unlike_btn btn btn-xs btn-default" %>
   <% end %>
-  <div class="col-md-1">
+  <div class="col-md-1 like like_btn btn btn-xs btn-default btn-info" style="float:right">
 	<%= Like.where("post_id=?",post.id).length%>
 </div>
   </div> 
