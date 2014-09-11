@@ -15,7 +15,6 @@
     <div class="expanded_content"><%= raw post.content %></div>
   </div>
 <hr>
-  <br>
     <div class="options_container">
       <% if signed_in? && (current_user.usertype && current_user?(user))%>
         <%= link_to "<span class='glyphicon glyphicon-trash'></span> Delete Article".html_safe, post, method: :delete, class:"delete_btn btn btn-xs", data: { confirm: "Are you sure you want to delete this article?"}, remote: true %>
