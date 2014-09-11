@@ -17,3 +17,5 @@
 
 # Ignore development version of session controller
 /app/controllers/sessions_controller.rb
+
+/config/database.yml
