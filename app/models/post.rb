@@ -36,6 +36,7 @@ class Post < ActiveRecord::Base
   def unfollow!(user)
     follows.find_by(user_id: user.id).destroy
   end
+
   def liking?(user)
     likes.where("user_id=?", user.id)
   end
