@@ -33,12 +33,12 @@ class PostsController < ApplicationController
     end
 
     @post.user = current_user
-    tag_it @post
+    tag_post @post
     if @post.save
-     # @post.tag_ids.each do |tag|
-     #   @post.follow!(User.find_by(usertype: tag))
-     # end
-     # PostMailer.post_notify(@user).deliver
+     @post.tag_ids.each do |tag|
+       @post.follow!(User.find_by(usertype: tag))
+     end
+     PostMailer.post_notify(@user).deliver
       @post.follow!(current_user)
       flash[:success] = "Successfully posted an article"
       redirect_to root_url

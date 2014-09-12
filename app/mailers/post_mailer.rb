@@ -1,5 +1,5 @@
 class PostMailer < ActionMailer::Base
-  	default from: "saikiranp321@gmail.com"
+  	default from: "ch12b034@smail.iitm.ac.in"
   
 	def post_notify(user)
   		@user = user
