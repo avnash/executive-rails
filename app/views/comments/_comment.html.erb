@@ -3,7 +3,7 @@
   <li><%= raw comment.content %></li><br>
 
   <div class="details_container medium_font"> 
-    <span class="float_left profile_pic"><%= image_tag(""+(user.picaddress || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left">  
+    <span class="float_left profile_pic"><%= image_tag(""+(user.profile_picture || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left">  
         <%= user.username %> <br> <%= user.fullname.capitalize %></span><span class="float_right"><br><%= (comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span> 
     </div>
 <br><br>

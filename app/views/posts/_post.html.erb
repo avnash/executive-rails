@@ -2,7 +2,7 @@
 <% user = User.find(post.user_id)%>
     <%= link_to "<div class='post_title'>#{post.title.capitalize}</div>".html_safe, post_path(id: post.id) %>
   <div class="details_container medium_font">
-    <span class="float_left profile_pic"><%= image_tag(""+(user.picaddress || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left"> 
+    <span class="float_left profile_pic"><%= image_tag(""+(user.profile_picture || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left"> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
   <% @tags.each do |tag| %>
       <%= link_to tag.name, display_path(id:tag.id), class:"" %>
