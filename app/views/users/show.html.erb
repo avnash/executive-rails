@@ -1,18 +1,33 @@
-<div class="container">
-	<div class="row col-md-8" style="left:30%">
-		<div class="col-md-3">
-			<%= image_tag(@picture,size:"100x100",alt:"Profile pic",title:"Edit this Pic") %>
-			
-		</div>
-		<div class="col-md-6">
-		<strong>Name</strong>   : <%= @user.fullname %><br>
-		<strong>Nick</strong>   : <%= @user.nick %><br>
-		<strong>Roll</strong>   : <%= @user.username %><br>
-		<strong>Room</strong>   : <%= @user.room %><br>
-		<strong>Hostel</strong> : <%= @user.hostel %><br>
-		<strong>Email</strong>  : <%= @user.email %><br>
-		<strong>Phone</strong>  : <%= @user.contact %><br><br>
-		<%= link_to "Edit Profile",edit_user_path,class:"btn btn-primary" %><br> 
-		</div>
-	</div>
+<div class="container" style="margin:auto 100px;">
+        <div class="row">
+                <div class="col-md-3">
+                  <%= image_tag @user.avatar.url,size:"100x110" %>
+                </div>
+                <div class="col-md-6">
+                <table class="table">
+                  <tr>
+                    <td>Name</td><td><%= @user.fullname %></td>
+                  </tr>
+                  <tr>
+                    <td>Nick</td><td><%= @user.nick %></td>
+                  </tr>
+                  <tr>
+                    <td>Roll</td><td><%= @user.username %></td>
+                  </tr>
+                  <tr>
+                    <td>Room</td><td><%= @user.room %></td>
+                  </tr>
+                  <tr>
+                    <td>Hostel</td><td><%= @user.hostel %></td>
+                  </tr>
+                  <tr>
+                    <td>Email</td><td><%= @user.email %></td>
+                  </tr>
+                  <tr>
+                    <td>Phone</td><td><%= @user.contact %></td>
+                  </tr>
+                </table>
+                        <%= link_to "Edit Profile",edit_user_path,class:"btn btn-primary" %><br> 
+                </div>  
+        </div>
 </div>

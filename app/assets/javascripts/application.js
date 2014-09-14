@@ -20,7 +20,6 @@
 var ready = function(){
   $(".comment_container").hide();
   $(".expanded_content").hide();
-
   $(".expand_comment").click(function(){
     if($(this).html()=="View Comments"){
       $(this).parent(".comment_toggle").siblings(".comment_container").stop().slideDown();

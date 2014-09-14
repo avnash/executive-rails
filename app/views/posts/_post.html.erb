@@ -21,17 +21,6 @@
     <% end %>
     </div>
   </span>
-  <% if current_user.id!=post.user_id %>
-  <div class="<%=post.id%> follow_unfollow_container">
-    <% if post.following?(current_user).length==0 %>
-      <%= render partial: 'shared/follow', locals: { post: post } %>
-  <% else %>
-      <%= render partial: 'shared/unfollow', locals: { post: post } %>
-  <% end %>
-  </div>
-<%end%>
-
-
 
 <% if current_user.id!=post.user_id %>
   <div class="<%=post.id%> like_unlike_container">
@@ -43,9 +32,15 @@
  </div>
 <%end%>
 
-
-
-
+<% if current_user.id!=post.user_id %>
+  <div class="<%=post.id%> follow_unfollow_container">
+    <% if post.following?(current_user).length==0 %>
+      <%= render partial: 'shared/follow', locals: { post: post } %>
+  <% else %>
+      <%= render partial: 'shared/unfollow', locals: { post: post } %>
+  <% end %>
+  </div>
+<%end%>
 
 <span class="comment_toggle btn btn-xs btn-default"><span class="expand_comment">View Comments</span>&nbsp(<%=Comment.where("post_id=?",post.id).length%>)</span>
   <br><br>
