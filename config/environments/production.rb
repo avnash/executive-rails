@@ -43,13 +43,13 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.smtp_settings = {
-  address           : "smtp2.iitm.ac.in",
-  port              : 25,            
-  domain            : "feedback",
-  authentication    : "login",
-  user_name         : "ch12b034",
-  password          : "-2kV8I@h",
-  enable_starttls_auto : true 
+  :address           => "smtp2.iitm.ac.in",
+  :port              => 25,            
+  :domain            => "feedback",
+  :authentication    => "login",
+  :user_name         => "ch12b034",
+  :password          => "-2kV8I@h",
+  :enable_starttls_auto => true 
   }
 
 
