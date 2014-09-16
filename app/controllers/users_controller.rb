@@ -10,12 +10,12 @@ class UsersController < ApplicationController
       @user.hostel = params[:user][:hostel]
       @user.email = params[:user][:email]
       @user.contact = params[:user][:contact]
-      @user.profile_picture = params[:user][:profile_picture].original_filename
+      @user.profile_picture = params[:user][:profile_picture]
       if @user.save
           uploaded_io = params[:user][:profile_picture]
           File.open(Rails.root.join('public','uploads', uploaded_io.original_filename), 'wb') do |file|
-              file.write(uploaded_io.read)
-          end
+              #file.write(uploaded_io.read)
+         end
 	  flash[:success]="User Profile updated successfully"
           redirect_to @user
       else
@@ -41,7 +41,6 @@ class UsersController < ApplicationController
     end
 
     def user_params 
-      params.require(:user).permit(:nick,:room,:hostel,:email,:contact,:profile_picture)
+      params.require(:user).permit(:nick,:room,:hostel,:email,:contact)
     end
-
 end

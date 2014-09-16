@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :posts, through: :follows
   has_many :rates
   has_many :posts, through: :rates
+  #has_attached_file :avatar,:styles=>{:medium=>"300x300>",:thumb=>"100x100>"},:default_url=>"/images/:style/missing.png"
+  #validates_attachment_content_type :avatar,allow_blank:true,:content_type=>/\.(gif|jpg|png|jpeg)\z/i
 
   before_create :create_remember_token
   before_save {self.username = username.upcase }
