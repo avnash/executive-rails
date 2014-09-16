@@ -111,14 +111,10 @@ ActiveRecord::Schema.define(version: 20140914093547) do
   add_index "rates", ["user_id"], name: "index_rates_on_user_id", using: :btree
 
   create_table "tags", force: true do |t|
-    t.string   "name",                limit: 45, null: false
+    t.string   "name",        limit: 45, null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree

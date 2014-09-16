@@ -1,0 +1,727 @@
+/* line 2, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background: whitesmoke;
+  font-size: 16px;
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* line 10, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+a, a:hover {
+  color: #4A439C;
+  text-decoration: none;
+}
+
+/* line 14, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+a:hover {
+  opacity: 0.9;
+}
+
+/* line 18, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.navbar li a:hover {
+  opacity: 1;
+}
+
+/* line 21, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.popover-title {
+  display: none;
+}
+
+/* line 25, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.medium_font {
+  font-size: 90%;
+}
+
+/* line 28, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.small_font {
+  font-size: 65%;
+}
+
+/* line 31, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.post_div textarea {
+  resize: vertical;
+  border: 2px solid #bebebe;
+}
+
+/* line 36, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.unsigned_msg_div, .rules_div {
+  background: white;
+  padding: 20px;
+  margin: 20px 10px 0 0;
+  float: left;
+}
+
+/* line 45, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus, .btn-primary:checked {
+  background: #4A439C;
+  border-color: #4A439C;
+}
+
+/* line 49, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.btn-primary:hover {
+  background: #6E6A9C;
+  border-color: #4A439C;
+}
+
+/* line 57, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.float_left {
+  float: left;
+}
+
+/* line 61, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.float_right {
+  float: right;
+}
+
+/* line 65, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.rating_icon {
+  height: 20px;
+  width: 20px;
+  float: left;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+/* line 74, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.rating_icon_dim {
+  height: 20px;
+  width: 20px;
+  float: left;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+}
+
+/* line 83, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.rating_icon_dim:hover {
+  opacity: 0.5;
+}
+
+/* line 87, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.search_dropdown {
+  padding: 5px 5px 5px 10px;
+}
+
+/* line 91, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.search_dropdown label {
+  padding: 3px;
+}
+
+/* line 95, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.search_arrow {
+  float: left;
+  padding: 7px 5px 7px 5px;
+  background: blue;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* line 103, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.search_div {
+  float: left;
+  width: 100%;
+}
+
+/* Wrapper for page content to push down footer */
+/* line 110, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.container {
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -50px;
+  /* Pad bottom by footer height */
+  padding: 0 0 75px;
+}
+
+/* line 121, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.bold {
+  font-weight: 900;
+}
+
+/* line 125, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.notification_div {
+  width: 100%;
+  float: left;
+}
+
+/* line 130, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+}
+
+/* line 133, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.notification_navbar_div {
+  height: inherit;
+  overflow: auto;
+  font-size: 90%;
+  width: 400px;
+  white-space: normal;
+}
+
+/* line 141, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.notifs_container {
+  max-height: 300px;
+  overflow: auto;
+  padding: 0 5px;
+}
+
+/* line 146, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.notifs_container li:hover {
+  background: #eee;
+}
+
+/* line 149, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.notifs_container a:hover {
+  text-decoration: none;
+}
+
+/* line 152, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.notifs_container a li {
+  padding: 5px;
+}
+
+/* line 155, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.dropdown ul {
+  border: 2px solid #c4c4c4;
+}
+
+/* line 163, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.dropdown li a {
+  white-space: normal;
+}
+
+/* line 167, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.badge_notify {
+  background: #00b0d3;
+  position: relative;
+  top: -10px;
+  left: -6px;
+  font-size: 0.7em;
+  padding: 0 3px 3px 3px;
+  border-radius: 10px;
+  color: black;
+}
+
+/* line 177, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.glyphicon-bell {
+  font-size: 1.2em;
+}
+
+/* line 180, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.delete_btn {
+  color: red;
+  padding: 0px;
+}
+
+/* line 185, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.solved_btn {
+  color: green;
+  padding: 0px;
+}
+
+/* line 190, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.navbar {
+  height: 50px;
+  background-color: #241D7A;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 3px 5px -2px rgba(200, 200, 200, 0.9);
+}
+
+/* line 197, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.navbar a {
+  color: white;
+}
+
+/* line 200, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.navbar a li {
+  color: black;
+}
+
+/* line 204, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.nav li ul li a:hover {
+  background: #c8c8c8;
+}
+
+/* line 207, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.nav li a:hover {
+  background: #4A439C;
+}
+
+/* line 210, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+#footer .nav li a:hover {
+  background: #fafafa;
+}
+
+/* line 214, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.navbar-collapse {
+  padding: 0;
+}
+
+/* line 217, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.allnotifs_btn a {
+  display: inline;
+}
+
+/* line 220, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.search_box {
+  float: left;
+  border-radius: 0px;
+  margin: 5px 0;
+}
+
+/* line 226, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.sidebar_link {
+  margin: 1px;
+  display: block;
+  background: #f0f0f0;
+  padding: 10px 25px;
+  color: black;
+  font-weight: 300;
+}
+
+/* line 234, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.sidebar_link:hover {
+  background: #7B77B3;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 240, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.tag_link {
+  padding: 0px 5px;
+}
+
+/* line 244, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.tag_container {
+  margin: 0 0 5px 0;
+}
+
+/* line 247, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.container {
+  padding-top: 50px;
+}
+
+/* line 250, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.footer-container {
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  position-bottom: 0px;
+}
+
+/* Set the fixed height of the footer here */
+/* line 259, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+#footer {
+  height: 50px;
+  margin: auto;
+  width: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+  box-shadow: 0 -3px 5px -2px rgba(200, 200, 200, 0.9);
+}
+
+/* line 267, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.gravatar {
+  background-color: #323232;
+  height: 100px;
+  width: 100px;
+}
+
+/* line 273, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.signin_form {
+  background: white;
+  padding: 35px;
+  box-shadow: 0 3px 5px -2px rgba(200, 200, 200, 0.9);
+  margin: 5%;
+}
+
+/* line 280, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.signin_form input {
+  border-radius: 0px;
+  margin: 5px;
+}
+
+/* line 287, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.new_post_form textarea {
+  resize: vertical;
+  border-radius: 0px;
+}
+
+/* line 291, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.new_post_form input {
+  border-radius: 0px;
+}
+
+/* line 294, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.new_post_form h1 {
+  width: 100%;
+  margin: 0px;
+}
+
+/* line 298, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.new_post_form .post_div .row {
+  margin: 0px;
+}
+
+/* line 301, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.new_post_form .post_div .form_container {
+  margin: 15px;
+  width: 100%;
+}
+
+/* line 306, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.sample1 {
+  background-color: #faf0fa;
+  width: 100%;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 315, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.review_div {
+  background-color: #c8c8c8;
+  width: 100%;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 324, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.sample2 {
+  background-color: #969696;
+  width: 20%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+/* line 334, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.book_content {
+  width: 60%;
+  float: left;
+  height: 100%;
+  background-color: #fa1432;
+}
+
+/* line 342, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.issue_div {
+  height: 100%;
+  width: 20%;
+  float: left;
+  background-color: #e5e500;
+  position: relative;
+}
+
+/* line 351, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.book_name {
+  background-color: #e51d00;
+  margin: 0;
+  padding: 5px 5px 0px 5px;
+}
+
+/* line 358, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.author_name {
+  background-color: #16e500;
+  margin: 0;
+  padding: 5px 5px 0px 5px;
+}
+
+/* line 365, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.review_hide {
+  background-color: #16e500;
+  margin: 0;
+  padding: 5px 5px 0px 5px;
+  float: right;
+}
+
+/* line 372, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.expand_review {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 378, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.wrap_div {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 384, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.form_container {
+  margin: auto;
+  width: 70%;
+  background-color: rb(100, 100, 0);
+}
+
+/* line 390, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.form_heading {
+  margin: auto;
+  width: 73%;
+}
+
+/* line 395, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.post_main_container {
+  margin-top: 10px;
+}
+
+/* line 400, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.post_div {
+  background: white;
+  float: left;
+  width: 100%;
+  padding: 20px 40px 20px 50px;
+  margin-bottom: 25px;
+  box-shadow: 0 0px 5px -2px rgba(100, 100, 100, 0.9);
+  display: none;
+}
+
+/* line 410, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+ul {
+  list-style: none;
+}
+
+/* line 414, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.post_content {
+  padding-bottom: 10px;
+  color: #323232;
+  font-size: 1.2em;
+}
+
+/* line 420, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+a .post_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 424, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+a .post_title {
+  color: #282828;
+  font-size: 2.2em;
+  font-weight: 300;
+}
+
+/* line 429, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.post_title:hover {
+  text-shadow: 2px 2px #999;
+  color: black;
+  opacity: 0.8;
+}
+
+/* line 435, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.follow_btn, .unfollow_btn {
+  border-radius: 0px;
+  background: #87C38E;
+  border: 0px;
+}
+
+/* line 441, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.like_btn, .unlike_btn {
+  border-radius: 0px;
+  background: #87C38E;
+  border: 0px;
+}
+
+/* line 447, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.follow_btn:hover, .follow_btn:active, .like_btn:hover, .like_btn:active {
+  background: #97D39E;
+  border: 0px;
+}
+
+/* line 451, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.follow_btn:focus, .like_btn:focus {
+  background: #87C38E;
+  border: 0px;
+}
+
+/* line 455, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.unfollow_btn, unfollow_btn:hover, .unfollow_btn:active {
+  background: white;
+  border: 0px;
+}
+
+/* line 459, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.unlike_btn, unlike_btn:hover, .unlike_btn:active {
+  background: white;
+  border: 0px;
+}
+
+/* line 464, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.comment_container input, .comment_container textarea {
+  border-radius: 0px;
+}
+
+/* line 467, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.comment_div {
+  padding: 15px 10px 10px 10px;
+  margin: 0 0 5px 0;
+  background-color: #f0f0f0;
+}
+
+/* line 474, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.sidebar {
+  margin: 10px 0 0 0;
+  padding: 15px;
+  z-index: 200;
+  float: left;
+  background: white;
+  box-shadow: 0 0px 5px -2px rgba(100, 100, 100, 0.9);
+}
+
+/*
+.left_sidebar {
+  
+}
+
+.left_sidebar:after {
+  content:'<<';
+  position:absolute;
+  right:-10px;
+  width:20px;
+  height:600px;
+  background:#fff;
+  top:0;
+  padding-top:90%;
+  border-width:0 1px 0 0;
+  border-style:solid;
+  border-color:#ccc;
+}
+
+.left_sidebar:hover:after {
+  background:#eee;
+  cursor:pointer;
+}*/
+/* line 506, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.right_sidebar {
+  right: 0;
+  float: right;
+}
+
+/* line 513, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.right_sidebar .sidebar_link {
+  padding-left: 5px;
+  background: white;
+  border-bottom: 1px solid #D0CDFF;
+}
+
+/* line 519, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.right_sidebar .sidebar_link:hover {
+  color: #22197F;
+}
+
+/* line 523, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+li {
+  list-style: none;
+}
+
+/* line 527, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.expand_comment {
+  float: left;
+}
+
+/* line 531, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.comment_toggle {
+  float: right;
+}
+
+/* line 535, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.load_more {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 539, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.load_more .btn {
+  background: #c8c8c8;
+}
+
+/* line 543, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.profile_pic {
+  margin: 0 5px;
+}
+
+/* line 547, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.profile_details {
+  margin: 5px;
+}
+
+/* line 552, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.secretary {
+  color: blue;
+}
+
+/* line 557, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.secretary_background {
+  background-color: #DAFFC7;
+}
+
+/* line 560, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.form-control:focus {
+  border-color: #4A439C;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(74, 67, 156, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(74, 67, 156, 0.6);
+}
+
+/* line 566, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.sec_pro_container {
+  padding: 20px;
+  background: white;
+  margin-bottom: 10px;
+  box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+  -webkit-box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+}
+
+/* line 573, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.sec_pro_container img:hover {
+  box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+  -webkit-box-shadow: 0 0px 15px -4px rgba(74, 67, 156, 0.9);
+}
+
+/* line 579, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+.form_container {
+  background: white;
+  padding: 40px;
+  margin: 10px;
+}
+
+@media (min-width: 980px) {
+  /* line 586, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+  .right_sidebar {
+    position: fixed;
+  }
+
+  /* line 590, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+  .sidebar {
+    position: fixed;
+  }
+
+  /* line 593, /var/rails/executive_wing_portal/executivetest1/app/assets/stylesheets/custom.css.scss */
+  .post_main_container {
+    margin-left: 25%;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
