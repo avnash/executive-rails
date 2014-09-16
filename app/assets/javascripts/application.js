@@ -11,10 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require ckeditor/init
 //= require turbolinks
 //= require bootstrap-tooltip
 //= require bootstrap-popover
+//= require flat-ui
 //= require_tree .
 
 var ready = function(){

@@ -1,0 +1,8 @@
+<stylesheet_link_tag "custom" %>
+<% @post.comments.each do |comment| %>
+  <% user = User.find_by(:id=>comment[:user_id]) %>
+  <table width="100%" class="table comment_div <% if user.usertype %>secretary_background<% end %>">
+    <tr><td width="100%"><%= raw comment.content %></td></tr>
+    <tr><td width="100%"><span class="glyphicon glyphicon-user"></span> <%= user.username %> | <%= user.fullname.capitalize %> | <% if user.usertype %> <span class="secretary"><%= user.typename %></span> | <% end %><span class="glyphicon glyphicon-time"></span><%= (comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></td></tr>      </table>
+<% end %>
+<a href="http://students.iitm.ac.in/executivetest" class="email-link">Continue to the discussion</a>
