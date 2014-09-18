@@ -14,7 +14,11 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
+<<<<<<< HEAD
   password: sai
+=======
+  password: a
+>>>>>>> 18829aecc61b96501ce84dec8934b2b6157c40ba
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -51,4 +55,4 @@ production:
   <<: *default
   database: executive_production
   username: executive
-  password: <%= ENV['FEEDBACK_DATABASE_PASSWORD'] %>
+  password: <%= ENV['EXECUTIVE_DATABASE_PASSWORD'] %>

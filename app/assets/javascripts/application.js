@@ -11,16 +11,18 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
+//= require ckeditor/init
 //= require turbolinks
 //= require bootstrap-tooltip
 //= require bootstrap-popover
+//= require flat-ui
 //= require_tree .
 
 var ready = function(){
   $(".comment_container").hide();
   $(".expanded_content").hide();
-
   $(".expand_comment").click(function(){
     if($(this).html()=="View Comments"){
       $(this).parent(".comment_toggle").siblings(".comment_container").stop().slideDown();

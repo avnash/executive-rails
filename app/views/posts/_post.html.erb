@@ -2,7 +2,7 @@
 <% user = User.find(post.user_id)%>
     <%= link_to "<div class='post_title'>#{post.title.capitalize}</div>".html_safe, post_path(id: post.id) %>
   <div class="details_container medium_font">
-    <span class="float_left profile_pic"><%= image_tag(""+(user.profile_picture || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left"> 
+    <span class="float_left profile_pic"><%= image_tag(""+(user.avatar.url || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left"> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
   <% @tags.each do |tag| %>
       <%= link_to tag.name, display_path(id:tag.id), class:"" %>
@@ -11,7 +11,13 @@
     </div>
   <br><hr>
   <div class="post_content">
-    <div class="truncated_content"><%= raw HTML_Truncator.truncate(post.content, 50, :ellipsis => '...<a class="expand_content">more</a>') %></div>
+    <div class="truncated_content"><%= raw HTML_Truncator.truncate(post.content, 50, :ellipsis => '...<a class="expand_content">more</a>') %>
+    <% if post.file_link%>
+      <br>
+      <%= link_to post.file_link, get_file_path(post_id: post.id), target: "_tab"%>
+    <% end %>
+    <br>
+    </div>
     <div class="expanded_content"><%= raw post.content %></div>
   </div>
 <hr>
@@ -21,17 +27,6 @@
     <% end %>
     </div>
   </span>
-  <% if current_user.id!=post.user_id %>
-  <div class="<%=post.id%> follow_unfollow_container">
-    <% if post.following?(current_user).length==0 %>
-      <%= render partial: 'shared/follow', locals: { post: post } %>
-  <% else %>
-      <%= render partial: 'shared/unfollow', locals: { post: post } %>
-  <% end %>
-  </div>
-<%end%>
-
-
 
 <% if current_user.id!=post.user_id %>
   <div class="<%=post.id%> like_unlike_container">
@@ -43,9 +38,15 @@
  </div>
 <%end%>
 
-
-
-
+<% if current_user.id!=post.user_id %>
+  <div class="<%=post.id%> follow_unfollow_container">
+    <% if post.following?(current_user).length==0 %>
+      <%= render partial: 'shared/follow', locals: { post: post } %>
+  <% else %>
+      <%= render partial: 'shared/unfollow', locals: { post: post } %>
+  <% end %>
+  </div>
+<%end%>
 
 <span class="comment_toggle btn btn-xs btn-default"><span class="expand_comment">View Comments</span>&nbsp(<%=Comment.where("post_id=?",post.id).length%>)</span>
   <br><br>

@@ -6,6 +6,7 @@ gem 'rails', '4.1.1'
 # Use postgres as the database for Active Record
 gem 'mysql2'
 # Use SCSS for stylesheets
+gem 'bootstrap-sass'
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -41,6 +42,10 @@ gem 'tzinfo-data'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Using Capistrano for deployment
+ gem 'capistrano'
+ gem 'capistrano-rails'
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
@@ -48,5 +53,9 @@ gem 'jquery-turbolinks'
 
 # HTML truncator
 gem 'html_truncator'
+gem 'hpricot'
+gem 'premailer-rails'
+gem 'autoprefixer-rails'
 gem 'paperclip'
 gem 'ckeditor'
+gem 'flat-ui-sass',github:'wingrunr21/flat-ui-sass'

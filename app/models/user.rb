@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
   has_many :posts, through: :follows
   has_many :rates
   has_many :posts, through: :rates
-  #has_attached_file :avatar,:styles=>{:medium=>"300x300>",:thumb=>"100x100>"},:default_url=>"/images/:style/missing.png"
-  #validates_attachment_content_type :avatar,allow_blank:true,:content_type=>/\.(gif|jpg|png|jpeg)\z/i
+  has_attached_file :avatar,:styles=>{:medium=>"300x300>",:thumb=>"100x100>"},:default_url=>"/uploads/:style/user-default-blue.png"
+  validates_attachment_content_type :avatar,allow_blank:true,:content_type=>['image/jpeg','image/png','image/gif']
 
   before_create :create_remember_token
   before_save {self.username = username.upcase }
@@ -24,10 +24,10 @@ class User < ActiveRecord::Base
   validates :username, presence: true, length: {is: 8}
   validates :notifications_count, presence: true
   validates :contact,presence: true,format: {with: /\A\d{10}\z/}
-  validates :profile_picture,allow_blank: true, format: {
-    with: %r{\.(gif|jpg|png|jpeg)\z}i,
-    message: 'Not a valid format please upload an image'
-  }
+  #validates :profile_picture,allow_blank: true, format: {
+   # with: %r{\.(gif|jpg|png|jpeg)\z}i,
+   # message: 'Not a valid format please upload an image'
+  #}
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end

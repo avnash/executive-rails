@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     @comment.content = params[:comment][:content]
     @comment.user_id = current_user.id
     @comment.post_id = @post.id
-    tag_it @comment
+    tag_comment @comment
     if @comment.save
       @post.follows.each do |follow|
         if follow.user_id!=current_user.id
