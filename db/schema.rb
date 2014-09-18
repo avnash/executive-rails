@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 20140914093547) do
     t.float    "avg_rate",            default: 0.0,   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ups"
+    t.integer  "downs"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
@@ -139,6 +141,7 @@ ActiveRecord::Schema.define(version: 20140914093547) do
     t.timestamp "updated_timestamp"
     t.text      "usertype"
     t.integer   "notifications_count",             default: 0, null: false
+    t.string    "typename",            limit: 40
     t.string    "avatar_file_name"
     t.string    "avatar_content_type"
     t.integer   "avatar_file_size"
