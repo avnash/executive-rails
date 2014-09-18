@@ -42,6 +42,10 @@ gem 'tzinfo-data'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Using Capistrano for deployment
+ gem 'capistrano'
+ gem 'capistrano-rails'
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
