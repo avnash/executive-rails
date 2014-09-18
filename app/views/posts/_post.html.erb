@@ -11,7 +11,13 @@
     </div>
   <br><hr>
   <div class="post_content">
-    <div class="truncated_content"><%= raw HTML_Truncator.truncate(post.content, 50, :ellipsis => '...<a class="expand_content">more</a>') %></div>
+    <div class="truncated_content"><%= raw HTML_Truncator.truncate(post.content, 50, :ellipsis => '...<a class="expand_content">more</a>') %>
+    <% if post.file_link%>
+      <br>
+      <%= link_to post.file_link, get_file_path(post_id: post.id), target: "_tab"%>
+    <% end %>
+    <br>
+    </div>
     <div class="expanded_content"><%= raw post.content %></div>
   </div>
 <hr>
