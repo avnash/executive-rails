@@ -38,14 +38,4 @@
 <% else %>
  <%= render 'shared/unsigned' %>
 <% end %>
-<%= javascript_include_tag 'ckeditor/ckeditor.js' %>
-<script type="text/javascript">
-  $(document).ready(function() {
-      if ($('textarea.ckeditor').length > 0) {
-          var data = $('textarea.ckeditor');
-          $.each(data, function(i) {
-              CKEDITOR.replace(data[i].id);
-          });
-      }
-  });
-</script>
+
