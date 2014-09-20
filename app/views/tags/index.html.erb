@@ -6,7 +6,8 @@
 
   	<%= render "shared/sidebar" %>
   	<%= render "shared/right_sidebar" %>
-<div class="post_main_container col-md-6 col-xs-12">
+<div class="post_main_container col-md-8 col-xs-12">
+<div class="off_menu"> <span class="fui-list"></span>Menu</div>
 	<% @posts.each do |post| %>
   		<%= render post %>
 	<% end %>

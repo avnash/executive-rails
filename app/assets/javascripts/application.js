@@ -19,6 +19,20 @@
 //= require flat-ui
 //= require_tree .
 
+$.fn.clicktoggle = function(a, b) {
+    return this.each(function() {
+        var clicked = false;
+        $(this).click(function() {
+            if (clicked) {
+                clicked = false;
+                return b.apply(this, arguments);
+            }
+            clicked = true;
+            return a.apply(this, arguments);
+        });
+    });
+};
+
 var ready = function(){
   $(".comment_container").hide();
   $(".expanded_content").hide();
@@ -38,6 +52,18 @@ var ready = function(){
     $(this).parent().parent('.truncated_content').siblings('.expanded_content').show();
   });
   $("[data-toggle='popover']").popover();
+  $('.off_menu').clicktoggle(
+
+    function(){
+      $('.post_main_container').addClass('col-md-6');
+      $('.left_sidebar').addClass('off_canvas');
+       $('.post_main_container').css({'margin-left':'0px'});
+    },
+    function(){
+      $('.post_main_container').removeClass('col-md-6');  
+      $('.left_sidebar').removeClass('off_canvas');   
+       $('.post_main_container').css({'margin-left':'60px'});
+    });
 
 };
 $(document).ready(ready);
