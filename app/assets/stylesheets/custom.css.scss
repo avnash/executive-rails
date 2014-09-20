@@ -494,8 +494,9 @@ a .post_title {
 
 .left_sidebar {
 transition:1s;
-  left:-30%;
-  width:0px !important;
+  left:-25%;
+ 
+
 }
 .left_sidebar.off_canvas
 {
@@ -606,12 +607,13 @@ li{
  .off_menu {
    
     position:relative;
-    left:-100px;
+    left:110%;
     top:30px;
     display:block;
    height:30px;
     z-index:1000;
     cursor:pointer;
+    width:100px;
 
   }
 
@@ -619,10 +621,12 @@ li{
    .post_main_container
    {
    margin-left:65px;
-   top:-30px;
+ 
+   transition:1s;
    
 
    }
+
 
 @media (min-width : 980px) {
   .right_sidebar {
@@ -630,7 +634,7 @@ li{
   }
   
   .sidebar {
-    position:fixed;
+    position:fixed !important;
   }
  
   

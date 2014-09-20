@@ -57,12 +57,12 @@ var ready = function(){
     function(){
       $('.post_main_container').addClass('col-md-6');
       $('.left_sidebar').addClass('off_canvas');
-       $('.post_main_container').css({'margin-left':'0px'});
+       $('.post_main_container').css({'margin-left':'0px','left':'25%'});
     },
     function(){
       $('.post_main_container').removeClass('col-md-6');  
       $('.left_sidebar').removeClass('off_canvas');   
-       $('.post_main_container').css({'margin-left':'60px'});
+       $('.post_main_container').css({'margin-left':'60px','left':'0'});
     });
 
 };
