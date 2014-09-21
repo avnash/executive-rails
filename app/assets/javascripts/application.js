@@ -53,6 +53,11 @@ var ready = function(){
   });
   $("[data-toggle='popover']").popover();
  
+    if($('.post_main_container').hasClass('new_post_form'))
+      {
+           $('.off_menu').css({'display':'none'});
+      }
+
   $('.off_menu').clicktoggle(
 
     function(){
@@ -60,6 +65,7 @@ var ready = function(){
       $('.left_sidebar').addClass('off_canvas');
        $('.post_main_container').css({'margin-left':'0px','left':'25%'});
        $(this).html('<span class="fui-list"></span>');
+     
     },
     function(){
       $('.post_main_container').removeClass('col-md-6');  
