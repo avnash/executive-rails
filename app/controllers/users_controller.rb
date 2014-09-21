@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       @user.avatar = params[:user][:avatar]
       if @user.save
           #uploaded_io = params[:user][:profile_picture]
-          #File.open(Rails.root.join('public','uploads', uploaded_io.original_filename), 'wb') do |file|
+          #File.open(Rails.root.join('public','uploads', uploaded_io), 'wb') do |file|
               #file.write(uploaded_io.read)
          #end
 	  flash[:success]="User Profile updated successfully"

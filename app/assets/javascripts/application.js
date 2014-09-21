@@ -34,6 +34,10 @@ $.fn.clicktoggle = function(a, b) {
 };
 
 var ready = function(){
+     $('.post_main_container').removeClass('col-md-6'); 
+      $('.post_main_container').css({'margin-left':'60px','left':'0','max-width':'66.6%'});
+      $('.off_menu').css({'left':'110%','background':'transparent'});
+
   $(".comment_container").hide();
   $(".expanded_content").hide();
   $(".expand_comment").click(function(){
@@ -64,14 +68,17 @@ var ready = function(){
       $('.post_main_container').addClass('col-md-6');
       $('.left_sidebar').addClass('off_canvas');
        $('.post_main_container').css({'margin-left':'0px','left':'25%'});
-       $(this).html('<span class="fui-list"></span>');
+       $(this).css({'left':'105%','background':'white'});
+       $(this).html('<span class="glyphicon glyphicon-chevron-left"></span>');
+       
      
     },
     function(){
       $('.post_main_container').removeClass('col-md-6');  
       $('.left_sidebar').removeClass('off_canvas');   
        $('.post_main_container').css({'margin-left':'60px','left':'0','max-width':'66.6%'});
-       $(this).html('<span class="fui-list"></span>Menu');
+       $(this).css({'left':'110%','background':'transparent'});
+       $(this).html('<span class="fui-list"></span>');
     });
 
 };
