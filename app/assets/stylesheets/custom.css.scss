@@ -630,7 +630,17 @@ li{
    
 
    }
+   .post_div.correction
+   {
 
+   left: 15%;
+position: relative;
+   }
+
+.like.btn-info,.follow.btn-info
+{
+  background:#645F9E !important;
+}
 
 @media (min-width : 980px) {
   .right_sidebar {
