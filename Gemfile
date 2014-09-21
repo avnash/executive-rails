@@ -57,4 +57,4 @@ gem 'hpricot'
 gem 'premailer-rails'
 gem 'autoprefixer-rails'
 gem 'flat-ui-sass',github:'wingrunr21/flat-ui-sass'
-gem 'rmagick', '2.13.2'
+
