@@ -52,17 +52,20 @@ var ready = function(){
     $(this).parent().parent('.truncated_content').siblings('.expanded_content').show();
   });
   $("[data-toggle='popover']").popover();
+ 
   $('.off_menu').clicktoggle(
 
     function(){
       $('.post_main_container').addClass('col-md-6');
       $('.left_sidebar').addClass('off_canvas');
        $('.post_main_container').css({'margin-left':'0px','left':'25%'});
+       $(this).html('<span class="fui-list"></span>');
     },
     function(){
       $('.post_main_container').removeClass('col-md-6');  
       $('.left_sidebar').removeClass('off_canvas');   
-       $('.post_main_container').css({'margin-left':'60px','left':'0'});
+       $('.post_main_container').css({'margin-left':'60px','left':'0','max-width':'66.6%'});
+       $(this).html('<span class="fui-list"></span>Menu');
     });
 
 };
