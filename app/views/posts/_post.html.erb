@@ -7,7 +7,7 @@
   <% @tags.each do |tag| %>
       <%= link_to tag.name, display_path(id:tag.id), class:"" %>
   <% end %> <br> 
-        <%= user.username %> | <%= user.fullname.capitalize %></span><span class="float_right"><br> <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span>
+        <%= user.username %> | <%= user.fullname.capitalize %> | <%= (post.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></span><br>
     </div>
   <br><hr>
   <div class="post_content">

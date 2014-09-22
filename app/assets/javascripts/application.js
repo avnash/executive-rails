@@ -46,8 +46,7 @@ var ready = function(){
       $(this).parent(".comment_toggle").siblings(".comment_container").stop().slideDown();
       $(this).html("Hide Comments");
     }
-    else{
-      
+    else{ 
       $(this).parent(".comment_toggle").siblings(".comment_container").stop().slideUp();
       $(this).html("View Comments");
     }
@@ -63,16 +62,12 @@ var ready = function(){
            $('.off_menu').css({'display':'none'});
       }
 
-  $('.off_menu').clicktoggle(
-
-    function(){
+  $('.off_menu').clicktoggle(function(){
       $('.post_main_container').addClass('col-md-6');
       $('.left_sidebar').addClass('off_canvas');
        $('.post_main_container').css({'margin-left':'0px','left':'25%'});
        $(this).css({'left':'105%','background':'white'});
        $(this).html('<span class="glyphicon glyphicon-chevron-left"></span>');
-       
-     
     },
     function(){
       $('.post_main_container').removeClass('col-md-6');  

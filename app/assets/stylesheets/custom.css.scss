@@ -254,7 +254,13 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   margin-right: 10px;
   position-bottom:0px;
 }
-
+/*All colors to violet*/
+input[type="submit"]{
+  background:#241D7A !important;
+}
+.details_container a ,.footer-container a{
+  color:#241D7A !important;
+}
 
 /* Set the fixed height of the footer here */
 #footer {
@@ -447,13 +453,22 @@ a .post_title {
   margin-left:-20px;
  }
 .like_num,.unlike_num {
-  border:1px solid #eee;
+  border:1px solid #CCC;
   padding:0 5px;
   display:inline-block;
   margin-left:5px;
-;
   line-height:25px;
   border-radius:4px;
+}
+.like_num:before,.unlike_num:before {
+  content:"";
+  background:url(http://static1.dmcdn.net/images/arrow_bubble.png.v25719b9f3ddac280);
+  width:3px;
+  height:5px;
+  left:-8px;
+  top:-4px;
+  position:relative;
+  display:inline-block;
 }
 .follow_btn:hover,.follow_btn:active,.like_btn:hover,.like_btn:active {
   background: #97D39E;
@@ -464,11 +479,11 @@ a .post_title {
   border:0px;
 }
 .unfollow_btn, unfollow_btn:hover, .unfollow_btn:active {
-  background:#ff3d3d !important;
+  background:#645F9E !important;
   border:0px;
 }
 .unlike_btn, unlike_btn:hover, .unlike_btn:active {
-  background:#ff3d3d !important;
+  background:#645F9E !important;
   border:0px;
 }
 
