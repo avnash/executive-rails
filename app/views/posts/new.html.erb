@@ -17,7 +17,7 @@
 
         <p style="font-size:13px;">Please note that the following text will be stored and displayed as HTML text. So if you want to break a line, use <br> <%= "your lines <br>" %> <br> and put your paragraphs as <br> <%= "<p> your content </p>" %><br>There are other advantages of HTML text though. You can use it to make your content more effective.</p>
         <%= f.label :content %><br>
-        <%= f.text_area :content, size: "80x12"  , class:"form-control",ckeditor:{language:'en'} %><br><br>
+        <%= f.bootsy_area :content, size: "80x12"  , class:"form-control",ckeditor:{language:'en'} %><br><br>
 	<input id="post_tag_ids_" name="post[tag_ids][]" type="hidden" value="<%=current_user.usertype %>">
         <div class="form-group" > 
      <%= f.label :files,class:"col-sm-2  control-label" %><br>

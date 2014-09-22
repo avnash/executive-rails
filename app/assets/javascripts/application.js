@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require bootsy
 //= require turbolinks
 //= require bootstrap-tooltip
 //= require bootstrap-popover
@@ -34,9 +35,9 @@ $.fn.clicktoggle = function(a, b) {
 };
 
 var ready = function(){
-     $('.post_main_container').removeClass('col-md-6'); 
-      $('.post_main_container').css({'margin-left':'60px','left':'0','max-width':'66.6%'});
-      $('.off_menu').css({'left':'110%','background':'transparent'});
+      //$('.post_main_container').removeClass('col-md-6');
+     //$('.post_main_container').css({'margin-left':'60px','left':'0','max-width':'66.6%'});
+      //$('.off_menu').css({'left':'110%','background':'transparent'});
 
   $(".comment_container").hide();
   $(".expanded_content").hide();
