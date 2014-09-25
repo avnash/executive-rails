@@ -129,7 +129,11 @@ a:hover {
 }
 
 ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;    
+  display: block;    
+}
+/*change hover effect*/
+nav a:hover {
+  color: #2ed1e0;
 }
 .notification_navbar_div {
   height:inherit;
@@ -258,7 +262,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 input[type="submit"]{
   background:#241D7A !important;
 }
-.details_container a ,.footer-container a{
+.details_container a ,.footer-container a,a.expand_content{
   color:#241D7A !important;
 }
 
@@ -403,7 +407,7 @@ input[type="submit"]{
 .post_main_container {
   //width:100%;
   //padding-left:calc(25% + 10px);
-  margin-top:10px;
+  margin-top:1.2%;
 }
 .post_div{
   background:rgb(255,255,255);

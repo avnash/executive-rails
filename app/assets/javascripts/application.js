@@ -69,6 +69,7 @@ var ready = function(){
        $('.post_main_container').css({'margin-left':'310px'});
        $(this).css({'left':'105%','background':'white'});
        $(this).html('<span class="glyphicon glyphicon-chevron-left"></span>');
+       $('.like_unlike_container>div').removeClass('col-md-2').addClass('col-md-3');
     },
     function(){
       $('.post_main_container').removeClass('col-md-6').addClass('col-md-8');  
@@ -76,7 +77,8 @@ var ready = function(){
        //$('.post_main_container').css({'margin-left':'60px','left':'0','max-width':'66.6%'});
       $('.post_main_container').css({'margin-left':'65px'}); 
       $(this).css({'left':'110%','background':'white'});
-       $(this).html('<span class="fui-list"></span>');
+      $(this).html('<span class="fui-list"></span>');
+      $('.like_unlike_container>div').removeClass('col-md-3').addClass('col-md-2');
     });
 
 };
@@ -106,3 +108,14 @@ $(document).on("ready page:change", function () {
         $('.post_div:lt("' + counter + '")').show();
     });
 });
+//like/unlike button bug
+$(document).on("ready page:change",function(){
+  $('.like,.unlike').click(function(){
+    if($('.post_main_container').hasClass('col-md-6')){
+       $('.like_unlike_container>div').removeClass('col-md-2').addClass('col-md-3');
+    }else{
+       $('.like_unlike_container>div').removeClass('col-md-3').addClass('col-md-2');
+    }
+  });
+});
+
