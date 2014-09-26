@@ -132,8 +132,11 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;    
 }
 /*change hover effect*/
-nav a:hover {
+nav a:hover,nav a:focus {
   color: #2ed1e0;
+}
+.form-control:focus {
+  border:2px solid #241D7A !important;
 }
 .notification_navbar_div {
   height:inherit;
@@ -458,7 +461,7 @@ a .post_title {
  }
 .like_num,.unlike_num {
   border:1px solid #CCC;
-  padding:0 5px;
+  padding:0 2px 0 0;
   display:inline-block;
   margin-left:5px;
   line-height:25px;
@@ -469,7 +472,7 @@ a .post_title {
   background:url(http://static1.dmcdn.net/images/arrow_bubble.png.v25719b9f3ddac280);
   width:3px;
   height:5px;
-  left:-8px;
+  left:-3px;
   top:-4px;
   position:relative;
   display:inline-block;
@@ -544,7 +547,8 @@ a .post_title {
   right:0;
   //margin-right:5px;
   //margin-left:0px;
-  float:right !important;
+  float:right;
+  margin-right: 1.6%;
 }
 
 .right_sidebar .sidebar_link {
@@ -622,7 +626,7 @@ li{
 
  .off_menu {
   position:relative;
-  left:110%;
+  left:105%;
   top:0px;
   height:30px;
   z-index:1000;
