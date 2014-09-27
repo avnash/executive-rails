@@ -138,6 +138,10 @@ nav a:hover,nav a:focus {
 .form-control:focus {
   border:2px solid #241D7A !important;
 }
+.btn-primary {
+  background:#241D7A !important;
+}
+
 .notification_navbar_div {
   height:inherit;
   overflow:auto;
@@ -278,6 +282,13 @@ input[type="submit"]{
   box-shadow: 0 -3px 5px -2px rgba(200,200,200,0.9);
 }
 
+#footer a {
+  font-weight:200 !important;
+  &:hover {
+    box-shadow:-2px -2px 1px #fff;
+  }
+}
+
 .gravatar{
   background-color: rgb(50,50,50);
   height: 100px;
@@ -403,7 +414,6 @@ input[type="submit"]{
 }
 
 .form_heading{
-  margin:auto;
   width:73%;
 }
 
