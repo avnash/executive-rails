@@ -133,7 +133,7 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 }
 /*change hover effect*/
 nav a:hover,nav a:focus {
-  color: #2ed1e0;
+  color: #eeeeee;
 }
 .form-control:focus {
   border:2px solid #241D7A !important;
@@ -297,10 +297,10 @@ input[type="submit"]{
 
 .signin_form {
   background:rgb(255,255,255);
-  padding:35px;
-  box-shadow: 0 3px 5px -2px rgba(200,200,200,0.9);
+  //padding:35px;
+  //box-shadow: 0 3px 5px -2px rgba(200,200,200,0.9);
   //width:30%;
-  margin:5%;
+  //margin:5%;
 }
 .signin_form input {
   border-radius: 0px;
@@ -323,7 +323,7 @@ input[type="submit"]{
 .new_post_form .post_div .row {
   margin:0px;
 }
-.new_post_form .post_div .form_container {
+.new_post_form .post_div{
   margin:15px;
   width:100%;
 }
@@ -408,7 +408,7 @@ input[type="submit"]{
 
 .form_container{
   margin:auto;
-  width:70%;
+  //width:70%;
   background-color:rb(100,100,0);
   padding:20px 50px !important;
 }
@@ -630,8 +630,8 @@ li{
 
 .form_container {
   background:white;
-  padding:40px; 
-  margin: 10px;
+  //padding:40px; 
+  //margin: 10px;
 }
 
  .off_menu {
