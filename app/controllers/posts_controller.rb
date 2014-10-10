@@ -68,7 +68,10 @@ class PostsController < ApplicationController
   end
 
   def get_file
-    send_file "#{Rails.root}/public/uploads/#{Post.find(params[:post_id]).file_link}", type: 'application/pdf', disposition: 'inline' 
+     a=Post.find(params[:post_id]).file_link
+     arr=a.split('|')
+     link=arr[params[:file_no].to_i]
+    send_file "#{Rails.root}/public/uploads/#{link}", type: 'application/pdf', disposition: 'inline' 
   end
 
   def update

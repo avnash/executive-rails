@@ -14,9 +14,12 @@
     <div class="truncated_content"><%= raw HTML_Truncator.truncate(post.content, 50, :ellipsis => '...<a class="expand_content">more</a>') %>
     <% if post.file_link%>
       <% @full_link_array = post.file_link.split('|') %>
+      <% i=0 %>
       <% @full_link_array.each do |file_link| %>
+
         <br>
-        <%= link_to file_link, get_file_path(post_id: post.id), target: "_tab"%>
+        <%= link_to file_link, get_file_path(post_id: post.id,file_no: i), target: "_tab"%>
+        <% i=i+1 %>
       <% end %>
     <% end %>
     <br>
