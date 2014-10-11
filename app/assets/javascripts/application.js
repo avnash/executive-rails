@@ -52,8 +52,8 @@ var ready = function(){
     }
   });
   $(".expand_content").click(function(){
-    $(this).parent().parent('.truncated_content').hide();
-    $(this).parent().parent('.truncated_content').siblings('.expanded_content').show();
+    $(this).parents('.truncated_content').hide();
+    $(this).parents('.truncated_content').siblings('.expanded_content').show();
   });
   $("[data-toggle='popover']").popover();
  
