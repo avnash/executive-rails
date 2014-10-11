@@ -1,6 +1,6 @@
 <div class="post_div <%=post.id%>"> 
 <% user = User.find(post.user_id)%>
-    <%= link_to "<div class='post_title'>#{post.title.capitalize}</div>".html_safe, post_path(id: post.id) %>
+    <%= link_to "<div class='post_title'>#{post.title}</div>".html_safe, post_path(id: post.id) %>
   <div class="details_container medium_font">
     <span class="float_left profile_pic"><%= image_tag(""+(user.avatar.url || 'user-default-blue.png')+"", size:"35x35", alt:user.username) %></span><span class="float_left"> 
         <% @tags = Post.includes(:tags).find(post.id).tags %>
@@ -13,8 +13,14 @@
   <div class="post_content">
     <div class="truncated_content"><%= raw HTML_Truncator.truncate(post.content, 50, :ellipsis => '...<a class="expand_content">more</a>') %>
     <% if post.file_link%>
-      <br>
-      <%= link_to post.file_link, get_file_path(post_id: post.id), target: "_tab"%>
+      <% @full_link_array = post.file_link.split('|') %>
+      <% i=0 %>
+      <% @full_link_array.each do |file_link| %>
+
+        <br>
+        <%= link_to file_link, get_file_path(post_id: post.id,file_no: i), target: "_tab"%>
+        <% i=i+1 %>
+      <% end %>
     <% end %>
     <br>
     </div>
