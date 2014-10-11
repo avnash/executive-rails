@@ -28,7 +28,7 @@ class SessionsController < ApplicationController
         redirect_to root_url
         flash[:success] = "Welcome, #{@user[:fullname]}"
        else
-         redirect_to signin_path
+         redirect_to root_path
          flash[:error] = "Sorry, such a user does not exist in our database."
        end
 
