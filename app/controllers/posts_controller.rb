@@ -38,7 +38,7 @@ class PostsController < ApplicationController
      @post.tag_ids.each do |tag|
        @post.follow!(User.find_by(usertype: tag))
      end
-     PostMailer.post_notify(@user).deliver
+     #PostMailer.post_notify(@user).deliver
       flash[:success] = "Successfully posted an article"
       redirect_to root_url
     else

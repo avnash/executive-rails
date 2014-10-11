@@ -27,6 +27,7 @@ class CommentsController < ApplicationController
         format.html {redirect_to @comment}
         format.js
       end
+      CommentMailer.comment_notify(@post.user_id).deliver
     else
       render 'new'
     end
