@@ -26,7 +26,7 @@
       <%end%>
       <% end %>
         <% if !signed_in? %>
-          <li><%= link_to "Sign In", signin_path %></li>
+          <li><%= link_to "Sign In", root_path %></li>
       <% else %>
 <!--          <li class="dropdown">
         <% @notifs = Notification.where("user_id=? AND seen=0", current_user) %>
