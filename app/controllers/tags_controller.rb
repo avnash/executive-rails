@@ -1,7 +1,7 @@
 class TagsController < ApplicationController
 
   def index
-    @posts = Post.where("solved=?",false).reverse_order
+    @posts = Post.where("solved=?",false).order('created_at DESC')
   end
 
   def show
@@ -12,7 +12,7 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     #@sec = User.find_or_initialize_by(usertype: @tag.id)
     @sec = User.where(usertype:@tag.id)
-    @posts = Tag.includes(:posts).find(@tag.id).posts.where("solved=?", false).reverse_order
+    @posts = Tag.includes(:posts).find(@tag.id).posts.where("solved=?", false).order('created_at DESC')
   end
 
   def update

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   include ApplicationHelper
 
   def show
-    @post = Post.find(params[:id]).order('created_at ASC')
+    @post = Post.find(params[:id])
     @comments = Comment.where("post_id = ?", params[:id])
   end
 
