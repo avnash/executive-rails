@@ -20,7 +20,7 @@
         <div class="form-group" > 
      <%= f.label :files, class:"col-sm-2 control-label" %><br>
      <div  class="col-md-6">
-	     <%= file_field_tag "files[]", type: :file, multiple: true %><br><br>
+	     <%= f.file_field :file_link , class:"form-control", multiple: true %><br><br>
         </div>
         </div>
 

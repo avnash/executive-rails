@@ -1,9 +1,9 @@
 <div class="sidebar right_sidebar float_right col-md-3 col-xs-12 col-sm-6">
     <strong>Recent Posts:</strong><br>
-    <% for post in Post.limit(5).reverse_order %>
+    <% for post in Post.order('created_at ASC').limit(5).reverse_order %>
       <% @tags = Post.includes(:tags).find(post.id).tags %>
     <li  data-container="body" data-trigger="hover" data-toggle="popover" data-content='' data-placement="right" >
-    <%= link_to "#{truncate(post.title.capitalize, length:65)}<br>--#{@tags[0].name}".html_safe, post_path(id:post.id), class:"sidebar_link" %>
+    <%= link_to "#{truncate(post.title, length:65)}<br>--#{@tags[0].name}".html_safe, post_path(id:post.id), class:"sidebar_link" %>
     </li>
   <% end %>
 </div>
