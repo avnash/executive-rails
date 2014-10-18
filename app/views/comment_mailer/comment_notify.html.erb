@@ -1,9 +1,6 @@
-<% %>
 <stylesheet_link_tag "custom" %>
-<% @post.comments.each do |comment| %>
-  <% user = User.find_by(:id=>comment[:user_id]) %>
-  <table width="100%" class="table comment_div <% if user.usertype %>secretary_background<% end %>">
-    <tr><td width="100%"><%= raw comment.content %></td></tr>
-    <tr><td width="100%"><span class="glyphicon glyphicon-user"></span> <%= user.username %> | <%= user.fullname.capitalize %> | <% if user.usertype %> <span class="secretary"><%= user.typename %></span> | <% end %><span class="glyphicon glyphicon-time"></span><%= (comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></td></tr>      </table>
-<% end %>
+<p><%= @commented_by.fullname.capitalize %> commented on your post "<%=@post.title %>"</p>
+  <table width="100%" class="table comment_div <% if @commented_by.usertype %>secretary_background<% end %>">
+    <tr><td width="100%"><%= raw @comment.content %></td></tr>
+    <tr><td width="100%"><span class="glyphicon glyphicon-user"></span> <%= @commented_by.username %> | <%= @commented_by.fullname.capitalize %> | <% if @commented_by.usertype %> <span class="secretary"><%= @commented_by.typename %></span> | <% end %><span class="glyphicon glyphicon-time"></span><%= (@comment.created_at+330.minutes).strftime("%d-%m-%y   %l:%M %p") %></td></tr>      </table>
 <a href="http://students.iitm.ac.in/executive" class="email-link">Continue to the discussion</a>
