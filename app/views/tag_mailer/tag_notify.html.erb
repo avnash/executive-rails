@@ -1,5 +1,5 @@
-<h5>Hi <%= @recipient %>,</h5>
-<h3>You were tagged by <%= @tagged_by %> in a <%= @content %> of <% if @content=="comment" %>Post <% end %>titled "<%= @post.title %>".</h3>
-<% if @content=="comment" %><%= @comment %><% end %>
-<h6>Regards</h6>
-<h5>Insti Webops Team</h5>
+<p>Hi <%= @recipient %>,</p>
+<p>You were tagged by <%= @tagged_by %> in a <%= @content %> of <% if @content=="comment" %>Post <% end %>titled "<%= @post.title %>".</p>
+<% if @content=="comment" %><div style="padding:10px;background:#737373;color:#fff;"><%= @comment %></div><% end %>
+<p>Regards</p>
+<p>Insti Webops Team</p>

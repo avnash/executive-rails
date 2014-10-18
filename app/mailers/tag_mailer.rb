@@ -9,7 +9,7 @@ class TagMailer < ActionMailer::Base
       @post = article.title
     else
       @comment = article.content
-      @post = Post.find(:id=>article.post_id)
+      @post = Post.find(article.post_id)
     end
     mail(to:@recipient+'@smail.iitm.ac.in',subject:'Executive Wing Portal')
   end
